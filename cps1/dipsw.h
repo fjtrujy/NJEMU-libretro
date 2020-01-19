@@ -2,14 +2,14 @@
 
 	dipsw.c
 
-	CPS1 DIPスイッチ設定
+	MVS DIP･ｹ･､･ﾃ･ﾁﾔOｶｨ
 
 ******************************************************************************/
 
-#ifndef CPS1_DIP_SWITCH_H
-#define CPS1_DIP_SWITCH_H
+#ifndef MVS_DIP_SWITCH_H
+#define MVS_DIP_SWITCH_H
 
-#define MAX_DIPSWITCHS		32
+#define MAX_DIPSWITCHS		8
 
 typedef struct
 {
@@ -21,8 +21,9 @@ typedef struct
 	const char *values_label[MAX_DIPSWITCHS + 1];
 } dipswitch_t;
 
+extern int neogeo_hard_dipsw;
 
-dipswitch_t *load_dipswitch(int *sx);
+dipswitch_t *load_dipswitch(void);
 void save_dipswitch(void);
 
-#endif /* CPS1_DIP_SWITCH_H */
+#endif /* MVS_DIP_SWITCH_H */
