@@ -2,12 +2,25 @@
 
 	ui_text.c
 
-	„ÉªËÆñ`„Éª„Ç´„Éª„ÄÅ„Éª‚ñ°„ÇΩ„Éª„É¶„Éª„Ç°„Ç•`„Éª„Ç±„Éª„Éã„Éª„É•„Éª„Ç±„Éª„Éç„Ç±„ÉØ„Çø‚ñ°
+	•Ê©`•∂•§•Û•ø•’•ß©`•π•∆•≠•π•»π‹¿Ì
 
 ******************************************************************************/
 
 #ifndef UI_TEXT_H
 #define UI_TEXT_H
+
+#define LANG_ENGLISH	            0
+#define LANG_JAPANESE	            1
+#define LANG_CHINESE_SIMPLIFIED	    2
+#define LANG_CHINESE_TRADITIONAL    3
+#define LANG_FRENCH                 0
+#define LANG_SPANISH                0
+#define LANG_GERMAN                 0
+#define LANG_ITALIAN                0
+#define LANG_DUTCH                  0
+#define LANG_PORTUGUESE             0
+#define LANG_RUSSIAN                0
+#define LANG_KOREAN                 0
 
 enum
 {
@@ -576,6 +589,7 @@ enum
 
 extern const char *ui_text[UI_TEXT_MAX];
 
-#define msg_printf printf
+void ui_text_init(void);
+int ui_text_get_language(void);
 
 #endif /* UI_TEXT_H */

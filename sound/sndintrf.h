@@ -2,7 +2,7 @@
 
 	sndintrf.c
 
-	繧ｵ繧ｦ繝ｳ繝峨う繝ｳ繧ｿ繝輔ぉ繝ｼ繧ｹ
+	サウンドインタフェース
 
 ******************************************************************************/
 
@@ -25,5 +25,6 @@ void sound_reset(void);
 #if (EMU_SYSTEM != CPS2)
 void sound_set_samplerate(void);
 #endif
+void sound_mute(int mute);
 
 #endif /* SOUND_INTERFACE_H */

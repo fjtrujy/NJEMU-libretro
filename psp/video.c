@@ -2,7 +2,7 @@
 
 	video.c
 
-	PSPãƒ“ãƒ‡ã‚ªåˆ¶å¾¡é–¢æ•°
+	PSPƒrƒfƒI§ŒäŠÖ”
 
 ******************************************************************************/
 
@@ -10,7 +10,7 @@
 
 
 /******************************************************************************
-	ãƒ­ãƒ¼ã‚«ãƒ«å¤‰æ•°/æ§‹é€ ä½“
+	ƒ[ƒJƒ‹•Ï”/\‘¢‘Ì
 ******************************************************************************/
 
 static const ScePspIMatrix4 dither_matrix =
@@ -26,7 +26,7 @@ static int pixel_format;
 
 
 /******************************************************************************
-	ã‚°ãƒ­ãƒ¼ãƒãƒ«å¤‰æ•°/æ§‹é€ ä½“
+	ƒOƒ[ƒoƒ‹•Ï”/\‘¢‘Ì
 ******************************************************************************/
 
 UINT8 ALIGN_PSPDATA gulist[GULIST_SIZE];
@@ -42,11 +42,11 @@ RECT full_rect = { 0, 0, SCR_WIDTH, SCR_HEIGHT };
 
 
 /******************************************************************************
-	ã‚°ãƒ­ãƒ¼ãƒãƒ«é–¢æ•°
+	ƒOƒ[ƒoƒ‹ŠÖ”
 ******************************************************************************/
 
 /*--------------------------------------------------------
-	ãƒ“ãƒ‡ã‚ªãƒ¢ãƒ¼ãƒ‰è¨­å®š
+	ƒrƒfƒIƒ‚[ƒhİ’è
 --------------------------------------------------------*/
 
 #if PSP_VIDEO_32BPP
@@ -65,15 +65,8 @@ void video_set_mode(int mode)
 
 
 /*--------------------------------------------------------
-	ãƒ“ãƒ‡ã‚ªå‡¦ç†åˆæœŸåŒ–
+	ƒrƒfƒIˆ—‰Šú‰»
 --------------------------------------------------------*/
-#ifndef TEXTURE_HEIGHT
-#define TEXTURE_HEIGHT	512
-#endif
-#define TEXTURES_COUNT  4
-
-#define NJEMU_TEX_BUFFER_SIZE       (FRAMESIZE + (BUF_WIDTH * TEXTURE_HEIGHT * TEXTURES_COUNT))
-#define PSP_VRAM_TOP                0x200000
 
 void video_init(void)
 {
@@ -92,27 +85,18 @@ void video_init(void)
 	{
 		pixel_format = GU_PSM_5551;
 
-      work_frame = (void *)(PSP_VRAM_TOP - NJEMU_TEX_BUFFER_SIZE); // 0xBC000 or 0x200000 -
-      draw_frame = (void *)(PSP_VRAM_TOP - NJEMU_TEX_BUFFER_SIZE - FRAMESIZE * 1 + 0x10000);
-      show_frame = (void *)(PSP_VRAM_TOP - NJEMU_TEX_BUFFER_SIZE - FRAMESIZE * 1);
-
-//      show_frame = (void *)(FRAMESIZE * 0);
-//      draw_frame = (void *)(FRAMESIZE * 1);
-
-
-
-      printf("work_frame : %08X \t %u\n",(u32)work_frame,(u32)work_frame);
-      fflush(stdout);
-//      work_frame = (void *)(0xF0000 );
-
+		show_frame = (void *)(FRAMESIZE * 0);
+		draw_frame = (void *)(FRAMESIZE * 1);
+		work_frame = (void *)(FRAMESIZE * 2);
+		tex_frame  = (void *)(FRAMESIZE * 3);
 	}
 
 	sceGuDisplay(GU_FALSE);
 	sceGuInit();
 
 	sceGuStart(GU_DIRECT, gulist);
-//	sceGuDrawBuffer(pixel_format, draw_frame, BUF_WIDTH);
-//	sceGuDispBuffer(SCR_WIDTH, SCR_HEIGHT, show_frame, BUF_WIDTH);
+	sceGuDrawBuffer(pixel_format, draw_frame, BUF_WIDTH);
+	sceGuDispBuffer(SCR_WIDTH, SCR_HEIGHT, show_frame, BUF_WIDTH);
 	sceGuOffset(2048 - (SCR_WIDTH / 2), 2048 - (SCR_HEIGHT / 2));
 	sceGuViewport(2048, 2048, SCR_WIDTH, SCR_HEIGHT);
 
@@ -154,11 +138,12 @@ void video_init(void)
 	sceDisplayWaitVblankStart();
 	sceGuDisplay(GU_TRUE);
 
+	ui_init();
 }
 
 
 /*--------------------------------------------------------
-	ãƒ“ãƒ‡ã‚ªå‡¦ç†çµ‚äº†(å…±é€š)
+	ƒrƒfƒIˆ—I—¹(‹¤’Ê)
 --------------------------------------------------------*/
 
 void video_exit(void)
@@ -169,7 +154,7 @@ void video_exit(void)
 
 
 /*--------------------------------------------------------
-	VSYNCã‚’å¾…ã¤
+	VSYNC‚ğ‘Ò‚Â
 --------------------------------------------------------*/
 
 void video_wait_vsync(void)
@@ -179,7 +164,7 @@ void video_wait_vsync(void)
 
 
 /*--------------------------------------------------------
-	ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ã‚’ãƒ•ãƒªãƒƒãƒ—
+	ƒXƒNƒŠ[ƒ“‚ğƒtƒŠƒbƒv
 --------------------------------------------------------*/
 
 void video_flip_screen(int vsync)
@@ -191,7 +176,7 @@ void video_flip_screen(int vsync)
 
 
 /*--------------------------------------------------------
-	VRAMã®ã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’å–å¾—
+	VRAM‚ÌƒAƒhƒŒƒX‚ğæ“¾
 --------------------------------------------------------*/
 
 void *video_frame_addr(void *frame, int x, int y)
@@ -206,7 +191,7 @@ void *video_frame_addr(void *frame, int x, int y)
 
 
 /*--------------------------------------------------------
-	æŒ‡å®šã—ãŸãƒ•ãƒ¬ãƒ¼ãƒ ã‚’ã‚¯ãƒªã‚¢
+	w’è‚µ‚½ƒtƒŒ[ƒ€‚ğƒNƒŠƒA
 --------------------------------------------------------*/
 
 void video_clear_frame(void *frame)
@@ -222,7 +207,7 @@ void video_clear_frame(void *frame)
 
 
 /*--------------------------------------------------------
-	æç”»/è¡¨ç¤ºãƒ•ãƒ¬ãƒ¼ãƒ ã‚’ã‚¯ãƒªã‚¢
+	•`‰æ/•\¦ƒtƒŒ[ƒ€‚ğƒNƒŠƒA
 --------------------------------------------------------*/
 
 void video_clear_screen(void)
@@ -233,7 +218,7 @@ void video_clear_screen(void)
 
 
 /*--------------------------------------------------------
-	æŒ‡å®šã—ãŸçŸ©å½¢ç¯„å›²ã‚’ã‚¯ãƒªã‚¢
+	w’è‚µ‚½‹éŒ`”ÍˆÍ‚ğƒNƒŠƒA
 --------------------------------------------------------*/
 
 void video_clear_rect(void *frame, RECT *rect)
@@ -249,7 +234,7 @@ void video_clear_rect(void *frame, RECT *rect)
 
 
 /*--------------------------------------------------------
-	æŒ‡å®šã—ãŸãƒ•ãƒ¬ãƒ¼ãƒ ã‚’å¡—ã‚Šã¤ã¶ã—
+	w’è‚µ‚½ƒtƒŒ[ƒ€‚ğ“h‚è‚Â‚Ô‚µ
 --------------------------------------------------------*/
 
 void video_fill_frame(void *frame, UINT32 color)
@@ -265,7 +250,7 @@ void video_fill_frame(void *frame, UINT32 color)
 
 
 /*--------------------------------------------------------
-	æŒ‡å®šã—ãŸçŸ©å½¢ç¯„å›²ã‚’å¡—ã‚Šã¤ã¶ã—
+	w’è‚µ‚½‹éŒ`”ÍˆÍ‚ğ“h‚è‚Â‚Ô‚µ
 --------------------------------------------------------*/
 
 void video_fill_rect(void *frame, UINT32 color, RECT *rect)
@@ -281,7 +266,7 @@ void video_fill_rect(void *frame, UINT32 color, RECT *rect)
 
 
 /*--------------------------------------------------------
-	çŸ©å½¢ç¯„å›²ã‚’ã‚³ãƒ”ãƒ¼
+	‹éŒ`”ÍˆÍ‚ğƒRƒs[
 --------------------------------------------------------*/
 
 void video_copy_rect(void *src, void *dst, RECT *src_rect, RECT *dst_rect)
@@ -347,7 +332,7 @@ void video_copy_rect(void *src, void *dst, RECT *src_rect, RECT *dst_rect)
 
 
 /*--------------------------------------------------------
-	çŸ©å½¢ç¯„å›²ã‚’å·¦å³åè»¢ã—ã¦ã‚³ãƒ”ãƒ¼
+	‹éŒ`”ÍˆÍ‚ğ¶‰E”½“]‚µ‚ÄƒRƒs[
 --------------------------------------------------------*/
 
 void video_copy_rect_flip(void *src, void *dst, RECT *src_rect, RECT *dst_rect)
@@ -413,7 +398,7 @@ void video_copy_rect_flip(void *src, void *dst, RECT *src_rect, RECT *dst_rect)
 
 
 /*--------------------------------------------------------
-	çŸ©å½¢ç¯„å›²ã‚’270åº¦å›è»¢ã—ã¦ã‚³ãƒ”ãƒ¼
+	‹éŒ`”ÍˆÍ‚ğ270“x‰ñ“]‚µ‚ÄƒRƒs[
 --------------------------------------------------------*/
 
 void video_copy_rect_rotate(void *src, void *dst, RECT *src_rect, RECT *dst_rect)
@@ -481,7 +466,7 @@ void video_copy_rect_rotate(void *src, void *dst, RECT *src_rect, RECT *dst_rect
 
 
 /*--------------------------------------------------------
-	ãƒ†ã‚¯ã‚¹ãƒãƒ£ã‚’çŸ©å½¢ç¯„å›²ã‚’æŒ‡å®šã—ã¦æç”»
+	ƒeƒNƒXƒ`ƒƒ‚ğ‹éŒ`”ÍˆÍ‚ğw’è‚µ‚Ä•`‰æ
 --------------------------------------------------------*/
 
 void video_draw_texture(UINT32 src_fmt, UINT32 dst_fmt, void *src, void *dst, RECT *src_rect, RECT *dst_rect)

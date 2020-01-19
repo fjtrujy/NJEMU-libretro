@@ -2,7 +2,7 @@
  *
  * CZ80 CB opcode include source file
  * CZ80 emulator version 0.9
- * Copyright 2004-2005 Sté§±hane Dallongeville
+ * Copyright 2004-2005 Stéphane Dallongeville
  *
  * (Modified by NJ)
  *

@@ -2,7 +2,7 @@
 
 	m68000.c
 
-	M68000 CPUインタフェース関数
+	M68000 CPU�C���^�t�F�[�X�֐�
 
 ******************************************************************************/
 
@@ -11,7 +11,7 @@
 
 #include "c68k.h"
 
-// MAME互換のレジスタ番号 (一部未対応)
+// MAME�݊��̃��W�X�^�ԍ� (�ꕔ���Ή�)
 enum
 {
 	/* NOTE: M68K_SP fetches the current SP, be it USP, ISP, or MSP */

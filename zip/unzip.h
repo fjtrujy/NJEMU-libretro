@@ -41,20 +41,6 @@
 #ifndef _unz_H
 #define _unz_H
 
-//avoid clash with unzip.c in frontend
-#define unzOpen               unzOpen_local
-#define unzClose              unzClose_local
-#define unzGoToFirstFile      unzGoToFirstFile_local
-#define unzGoToNextFile       unzGoToNextFile_local
-#define unzGetCurrentFileInfo unzGetCurrentFileInfo_local
-#define unzOpenCurrentFile    unzOpenCurrentFile_local
-#define unzCloseCurrentFile   unzCloseCurrentFile_local
-#define unzReadCurrentFile    unzReadCurrentFile_local
-#define unzLocateFile         unzLocateFile_local
-//#define unzstatic_getByte     unzstatic_getByte_local
-#define unz_copyright         unz_copyright_local
-//
-
 #ifdef __cplusplus
 extern "C" {
 #endif

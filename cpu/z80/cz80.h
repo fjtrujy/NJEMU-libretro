@@ -2,7 +2,7 @@
  *
  * CZ80 (Z80 CPU emulator) version 0.9
  * Compiled with Dev-C++
- * Copyright 2004-2005 Sté§±hane Dallongeville
+ * Copyright 2004-2005 Stéphane Dallongeville
  *
  * (Modified by NJ)
  *

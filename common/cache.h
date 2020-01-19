@@ -2,7 +2,7 @@
 
 	cache.c
 
-	・皈筵□ュ・罕テ・キ・螂、・□ソ・ユ・ァゥ`・ケ騅ハ□
+	���ꥭ��å��奤�󥿥ե��`���v��
 
 ******************************************************************************/
 
@@ -19,7 +19,7 @@
 #elif (EMU_SYSTEM == MVS)
 #define GFX_MEMORY			memory_region_gfx3
 #define GFX_SIZE			memory_length_gfx3
-#define MAX_CACHE_BLOCKS	0x800	//ヨァウヨタゥネンCROM」ャヤュハシ0x400
+#define MAX_CACHE_BLOCKS	0x800	//֧������CROM��ԭʼ0x400
 #endif
 
 enum

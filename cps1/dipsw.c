@@ -2,7 +2,7 @@
 
 	dipsw.c
 
-	CPS1 DIP・ケ・、・テ・チヤOカィ
+	CPS1 DIP�����å��O��
 
 ******************************************************************************/
 
@@ -10,9 +10,9 @@
 
 #define MENU_BLANK					{ "\n", 0, 0x00, 0, 0, { NULL } }
 #if DIPSW_CHINESE_SIMPLIFIED
-#define MENU_RETURN		{ "キオサリヨ□ヒオ・", 1, 0x00, 0, 0, { NULL } }
+#define MENU_RETURN		{ "�������˵�", 1, 0x00, 0, 0, { NULL } }
 #elif DIPSW_CHINESE_TRADITIONAL
-#define MENU_RETURN		{ "キオサリヨ□ヒ□", 1, 0x00, 0, 0, { NULL } }
+#define MENU_RETURN		{ "�������ˆ�", 1, 0x00, 0, 0, { NULL } }
 #else
 #define MENU_RETURN		{ "Return to main menu", 1, 0x00, 0, 0, { NULL } }
 #endif
@@ -43,17 +43,17 @@
 
 
 /*--------------------------------------
-  ケイヘィ (bit)
+  ��ͨ (bit)
 --------------------------------------*/
 
 #if DIPSW_CHINESE_SIMPLIFIED
-#define dip_on_off		{ "ケリ","ソェ"  }
-#define dip_yes_no		{ "キ□,"ハヌ" }
-#define dip_game_mode	{ "モホマキ","イ簗ヤ" }
+#define dip_on_off		{ "��","��"  }
+#define dip_yes_no		{ "��","��" }
+#define dip_game_mode	{ "��Ϸ","����" }
 #elif DIPSW_CHINESE_TRADITIONAL
-#define dip_on_off		{ "鷄","饑"  }
-#define dip_yes_no		{ "キ□,"ハヌ" }
-#define dip_game_mode	{ "゜[沢","忱ヤ□ }
+#define dip_on_off		{ "�P","�_"  }
+#define dip_yes_no		{ "��","��" }
+#define dip_game_mode	{ "�[��","�yԇ" }
 #else
 #define dip_on_off		{ "Off","On"  }
 #define dip_yes_no		{ "No","Yes" }
@@ -81,32 +81,32 @@ static void dip_save_bit(int sw, int value, int shift, int invert)
 
 
 /*--------------------------------------
-  ケイヘィ (・ウ・、・□type1)
+  ��ͨ (������ type1)
 --------------------------------------*/
 
 #if DIPSW_CHINESE_SIMPLIFIED
 #define dip_coin1			\
 {							\
-	"4アメヘ□エホ",				\
-	"3アメヘ□エホ",				\
-	"2アメヘ□エホ",				\
-	"1アメヘ□エホ",				\
-	"1アメヘ□エホ",				\
-	"1アメヘ□エホ",				\
-	"1アメヘ□エホ",				\
-	"1アメヘ□エホ"				\
+	"4����1��",				\
+	"3����1��",				\
+	"2����1��",				\
+	"1����1��",				\
+	"1����2��",				\
+	"1����3��",				\
+	"1����4��",				\
+	"1����6��"				\
 }
 #elif DIPSW_CHINESE_TRADITIONAL
 #define dip_coin1			\
 {							\
-	"4芝ヘ□エホ",				\
-	"3芝ヘ□エホ",				\
-	"2芝ヘ□エホ",				\
-	"1芝ヘ□エホ",				\
-	"1芝ヘ□エホ",				\
-	"1芝ヘ□エホ",				\
-	"1芝ヘ□エホ",				\
-	"1芝ヘ□エホ"				\
+	"4����1��",				\
+	"3����1��",				\
+	"2����1��",				\
+	"1����1��",				\
+	"1����2��",				\
+	"1����3��",				\
+	"1����4��",				\
+	"1����6��"				\
 }
 #else
 #define dip_coin1			\
@@ -189,30 +189,30 @@ static void dip_save_coin1b(int value)
 }
 
 /*--------------------------------------
-  ケイヘィ (・ウ・、・□type2)
+  ��ͨ (������ type2)
 --------------------------------------*/
 
 #if DIPSW_CHINESE_SIMPLIFIED
 #define dip_coin2							\
-{	"4アメヘ□エホ",								\
-	"3アメヘ□エホ",								\
-	"2アメヘ□エホ",								\
-	"2アメヘ□エホ(1アメミ□リ)",					\
-	"1アメヘ□エホ",								\
-	"1アメヘ□エホ",								\
-	"1アメヘ□エホ",								\
-	"1アメヘ□エホ"								\
+{	"4����1��",								\
+	"3����1��",								\
+	"2����1��",								\
+	"2����1��(1������)",					\
+	"1����1��",								\
+	"1����2��",								\
+	"1����3��",								\
+	"1����4��"								\
 }
 #elif DIPSW_CHINESE_TRADITIONAL
 #define dip_coin2							\
-{	"4芝ヘ□エホ",								\
-	"3芝ヘ□エホ",								\
-	"2芝ヘ□エホ",								\
-	"2芝ヘ□エホ(1芝タm鷄)",					\
-	"1芝ヘ□エホ",								\
-	"1芝ヘ□エホ",								\
-	"1芝ヘ□エホ",								\
-	"1芝ヘ□エホ"								\
+{	"4����1��",								\
+	"3����1��",								\
+	"2����1��",								\
+	"2����1��(1���m�P)",					\
+	"1����1��",								\
+	"1����2��",								\
+	"1����3��",								\
+	"1����4��"								\
 }
 #else
 #define dip_coin2							\
@@ -295,21 +295,21 @@ static void dip_save_coin2b(int value)
 }
 
 /*--------------------------------------
-  ケイヘィ (ソ□□
+  ��ͨ (����)
 --------------------------------------*/
 #if DIPSW_CHINESE_SIMPLIFIED
 #define dip_cabinet	\
 {					\
-	"1ネヒ",			\
-	"2ネヒ",			\
-	"ツヨチ□゜オケニチトサ"	\
+	"1��",			\
+	"2��",			\
+	"�����ߵ���Ļ"	\
 }
 #elif DIPSW_CHINESE_TRADITIONAL
 #define dip_cabinet	\
 {					\
-	"1ネヒ",			\
-	"2ネヒ",			\
-	"ン□□嵯ケニチトサ"	\
+	"1��",			\
+	"2��",			\
+	"݆�����Ļ"	\
 }
 #else
 #define dip_cabinet				\
@@ -343,32 +343,32 @@ static void dip_save_cabinet(int value)
 }
 
 /*--------------------------------------
-  ケイヘィ (□メラカネ)
+  ��ͨ (�y�׶�)
 --------------------------------------*/
 
 #if DIPSW_CHINESE_SIMPLIFIED
 #define dip_difficulty		\
 {							\
-	"1 (ラ□ヘトムカネ)",			\
+	"1 (����Ѷ�)",			\
 	"2",					\
 	"3",					\
-	"4 (ニユヘィ)",				\
+	"4 (��ͨ)",				\
 	"5",					\
 	"6",					\
 	"7",					\
-	"8 (ラ□゜トムカネ)"			\
+	"8 (����Ѷ�)"			\
 }
 #elif DIPSW_CHINESE_TRADITIONAL
 #define dip_difficulty		\
 {							\
-	"1 (ラ□ヘ□カネ)",			\
+	"1 (����y��)",			\
 	"2",					\
 	"3",					\
-	"4 (ニユヘィ)",				\
+	"4 (��ͨ)",				\
 	"5",					\
 	"6",					\
 	"7",					\
-	"8 (ラ□゜□カネ)"			\
+	"8 (����y��)"			\
 }
 #else
 #define dip_difficulty		\
@@ -458,28 +458,28 @@ static dipswitch_t dipswitch_forgottn[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメA",		1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカアメB",		1, 0x38, 0, 7, dip_coin1      },
-	{ "ムンハセノ□□,	1, 0x40, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",	1, 0x80, 0, 1, dip_on_off     },
+	{ "Ͷ��A",		1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",		1, 0x38, 0, 7, dip_coin1      },
+	{ "��ʾ����",	1, 0x40, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",	1, 0x80, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "トムカネ",		1, 0x07, 0, 7, dip_difficulty },
-	{ "オ□ヤト」ハス",	1, 0x40, 0, 1, dip_on_off     },
-	{ "ヒ□ィ",		1, 0x80, 0, 1, dip_on_off     },
+	{ "�Ѷ�",		1, 0x07, 0, 7, dip_difficulty },
+	{ "����ģʽ",	1, 0x40, 0, 1, dip_on_off     },
+	{ "����",		1, 0x80, 0, 1, dip_on_off     },
 
 	// DIP C
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝A",		1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカ芝B",		1, 0x38, 0, 7, dip_coin1      },
-	{ "ムンハセツ編□,	1, 0x40, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",	1, 0x80, 0, 1, dip_on_off     },
+	{ "Ͷ��A",		1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",		1, 0x38, 0, 7, dip_coin1      },
+	{ "��ʾ��",	1, 0x40, 0, 1, dip_on_off     },
+	{ "���D��Ļ",	1, 0x80, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "□カネ",		1, 0x07, 0, 7, dip_difficulty },
-	{ "ユ{ヤ□」ハス",	1, 0x40, 0, 1, dip_on_off     },
-	{ "詈カィ",		1, 0x80, 0, 1, dip_on_off     },
+	{ "�y��",		1, 0x07, 0, 7, dip_difficulty },
+	{ "�{ԇģʽ",	1, 0x40, 0, 1, dip_on_off     },
+	{ "�i��",		1, 0x80, 0, 1, dip_on_off     },
 
 	// DIP C
 #else
@@ -537,36 +537,36 @@ static dipswitch_t dipswitch_ghouls[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメA",			1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカアメB",			1, 0x38, 0, 7, dip_coin1      },
-	{ "マヤハセ",			1, 0xc0, 0, 2, dip_cabinet    },
+	{ "Ͷ��A",			1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",			1, 0x38, 0, 7, dip_coin1      },
+	{ "��ʾ",			1, 0xc0, 0, 2, dip_cabinet    },
 
 	// DIP B
-	{ "トムカネ",			1, 0x07, 0, 7, dip_difficulty },
-	{ "スアタ□愑□,		1, 0x30, 0, 3, {"1ヘ□3ヘ□テソ3ヘ□,"2ヘ□5ヘ□テソ7ヘ□,"3ヘ□6ヘ□テソ7ヘ□,"4ヘ□7ヘ□テソ8ヘ□} },
+	{ "�Ѷ�",			1, 0x07, 0, 7, dip_difficulty },
+	{ "��������",		1, 0x30, 0, 3, {"1��,3��,ÿ3��","2��,5��,ÿ7��","3��,6��,ÿ7��","4��,7��,ÿ8��"} },
 
 	// DIP C
-	{ "ノ愑□,			1, 0x03, 0, 3, {"3","4","5","6"} },
-	{ "キュラェニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",			1, 0x03, 0, 3, {"3","4","5","6"} },
+	{ "��ת��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",		1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝A",			1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカ芝B",			1, 0x38, 0, 7, dip_coin1      },
-	{ "□ハセ",			1, 0xc0, 0, 2, dip_cabinet    },
+	{ "Ͷ��A",			1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",			1, 0x38, 0, 7, dip_coin1      },
+	{ "�@ʾ",			1, 0xc0, 0, 2, dip_cabinet    },
 
 	// DIP B
-	{ "□カネ",			1, 0x07, 0, 7, dip_difficulty },
-	{ "ェт□愑□,		1, 0x30, 0, 3, {"1ネf,3ネf,テソ3ネf","2ネf,5ネf,テソ7ネf","3ネf,6ネf,テソ7ネf","4ネf,7ネf,テソ8ネf"} },
+	{ "�y��",			1, 0x07, 0, 7, dip_difficulty },
+	{ "��������",		1, 0x30, 0, 3, {"1�f,3�f,ÿ3�f","2�f,5�f,ÿ7�f","3�f,6�f,ÿ7�f","4�f,7�f,ÿ8�f"} },
 
 	// DIP C
-	{ "ノ愑□,			1, 0x03, 0, 3, {"3","4","5","6"} },
-	{ "キュ゛Dニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",			1, 0x03, 0, 3, {"3","4","5","6"} },
+	{ "���D��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",		1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coin A",         1, 0x07, 0, 7, dip_coin1      },
@@ -593,38 +593,38 @@ static dipswitch_t dipswitch_ghoulsu[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメA",			1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカアメB",			1, 0x38, 0, 7, dip_coin1      },
-	{ "マヤハセ",			1, 0xc0, 0, 2, dip_cabinet    },
+	{ "Ͷ��A",			1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",			1, 0x38, 0, 7, dip_coin1      },
+	{ "��ʾ",			1, 0xc0, 0, 2, dip_cabinet    },
 
 	// DIP B
-	{ "トムカネ",			1, 0x07, 0, 7, dip_difficulty },
-	{ "スアタ□愑□,		1, 0x30, 0, 3, {"1ヘ□3ヘ□テソ3ヘ□,"2ヘ□5ヘ□テソ7ヘ□,"3ヘ□6ヘ□テソ7ヘ□,"4ヘ□7ヘ□テソ8ヘ□} },
-	{ "ヒ□ィ",			1, 0x80, 0, 1, dip_on_off     },
+	{ "�Ѷ�",			1, 0x07, 0, 7, dip_difficulty },
+	{ "��������",		1, 0x30, 0, 3, {"1��,3��,ÿ3��","2��,5��,ÿ7��","3��,6��,ÿ7��","4��,7��,ÿ8��"} },
+	{ "����",			1, 0x80, 0, 1, dip_on_off     },
 
 	// DIP C
-	{ "ノ愑□,			1, 0x03, 0, 3, {"2","3","4","5"} },
-	{ "キュラェニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",			1, 0x03, 0, 3, {"2","3","4","5"} },
+	{ "��ת��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",		1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝A",			1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカ芝B",			1, 0x38, 0, 7, dip_coin1      },
-	{ "□ハセ",			1, 0xc0, 0, 2, dip_cabinet    },
+	{ "Ͷ��A",			1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",			1, 0x38, 0, 7, dip_coin1      },
+	{ "�@ʾ",			1, 0xc0, 0, 2, dip_cabinet    },
 
 	// DIP B
-	{ "□カネ",			1, 0x07, 0, 7, dip_difficulty },
-	{ "ェт□愑□,		1, 0x30, 0, 3, {"1ネf,3ネf,テソ3ネf","2ネf,5ネf,テソ7ネf","3ネf,6ネf,テソ7ネf","4ネf,7ネf,テソ8ネf"} },
-	{ "詈カィ",			1, 0x80, 0, 1, dip_on_off     },
+	{ "�y��",			1, 0x07, 0, 7, dip_difficulty },
+	{ "��������",		1, 0x30, 0, 3, {"1�f,3�f,ÿ3�f","2�f,5�f,ÿ7�f","3�f,6�f,ÿ7�f","4�f,7�f,ÿ8�f"} },
+	{ "�i��",			1, 0x80, 0, 1, dip_on_off     },
 
 	// DIP C
-	{ "ノ愑□,			1, 0x03, 0, 3, {"2","3","4","5"} },
-	{ "キュ゛Dニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",			1, 0x03, 0, 3, {"2","3","4","5"} },
+	{ "���D��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",		1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coin A",         1, 0x07, 0, 7, dip_coin1      },
@@ -652,38 +652,38 @@ static dipswitch_t dipswitch_daimakai[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメA",			1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカアメB",			1, 0x38, 0, 7, dip_coin1      },
-	{ "マヤハセ",			1, 0xc0, 0, 2, dip_cabinet    },
+	{ "Ͷ��A",			1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",			1, 0x38, 0, 7, dip_coin1      },
+	{ "��ʾ",			1, 0xc0, 0, 2, dip_cabinet    },
 
 	// DIP B
-	{ "トムカネ",			1, 0x07, 0, 7, dip_difficulty },
-	{ "スアタ□愑□,		1, 0x30, 0, 3, {"1ヘ□3ヘ□テソ3ヘ□,"2ヘ□5ヘ□テソ7ヘ□,"3ヘ□6ヘ□テソ7ヘ□,"4ヘ□7ヘ□テソ8ヘ□} },
-	{ "ヒ□ィ",			1, 0x80, 0, 1, dip_on_off     },
+	{ "�Ѷ�",			1, 0x07, 0, 7, dip_difficulty },
+	{ "��������",		1, 0x30, 0, 3, {"1��,3��,ÿ3��","2��,5��,ÿ7��","3��,6��,ÿ7��","4��,7��,ÿ8��"} },
+	{ "����",			1, 0x80, 0, 1, dip_on_off     },
 
 	// DIP C
-	{ "ノ愑□,			1, 0x03, 0, 3, {"3","4","5","6"} },
-	{ "キュラェニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",			1, 0x03, 0, 3, {"3","4","5","6"} },
+	{ "��ת��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",		1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝A",			1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカ芝B",			1, 0x38, 0, 7, dip_coin1      },
-	{ "□ハセ",			1, 0xc0, 0, 2, dip_cabinet    },
+	{ "Ͷ��A",			1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",			1, 0x38, 0, 7, dip_coin1      },
+	{ "�@ʾ",			1, 0xc0, 0, 2, dip_cabinet    },
 
 	// DIP B
-	{ "□カネ",			1, 0x07, 0, 7, dip_difficulty },
-	{ "ェт□愑□,		1, 0x30, 0, 3, {"1ネf,3ネf,テソ3ネf","2ネf,5ネf,テソ7ネf","3ネf,6ネf,テソ7ネf","4ネf,7ネf,テソ8ネf"} },
-	{ "詈カィ",			1, 0x80, 0, 1, dip_on_off     },
+	{ "�y��",			1, 0x07, 0, 7, dip_difficulty },
+	{ "��������",		1, 0x30, 0, 3, {"1�f,3�f,ÿ3�f","2�f,5�f,ÿ7�f","3�f,6�f,ÿ7�f","4�f,7�f,ÿ8�f"} },
+	{ "�i��",			1, 0x80, 0, 1, dip_on_off     },
 
 	// DIP C
-	{ "ノ愑□,			1, 0x03, 0, 3, {"3","4","5","6"} },
-	{ "キュ゛Dニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",			1, 0x03, 0, 3, {"3","4","5","6"} },
+	{ "���D��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",		1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coin A",         1, 0x07, 0, 7, dip_coin1      },
@@ -823,42 +823,42 @@ static dipswitch_t dipswitch_strider[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメA",			1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカアメB",			1, 0x38, 0, 7, dip_coin1      },
-	{ "マヤハセ",			1, 0xc0, 0, 2, dip_cabinet    },
+	{ "Ͷ��A",			1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",			1, 0x38, 0, 7, dip_coin1      },
+	{ "��ʾ",			1, 0xc0, 0, 2, dip_cabinet    },
 
 	// DIP B
-	{ "トムカネ",							1, 0x07, 0, 7, dip_difficulty },
-	{ "スアタ□愑□,						1, 0x30, 0, 3, {"2ヘ□4ヘ□テソ6ヘ□,"3ヘ□5ヘ□テソ7ヘ□,"2ヘ□ヘ6ヘ□,"3ヘ□ヘ6ヘ□} },
-	{ "Internal Diff. on Life Loss",	1, 0xc0, 0, 2, {"-3","-1","トャネマ"} },
+	{ "�Ѷ�",							1, 0x07, 0, 7, dip_difficulty },
+	{ "��������",						1, 0x30, 0, 3, {"2��,4��,ÿ6��","3��,5��,ÿ7��","2���6��","3���6��"} },
+	{ "Internal Diff. on Life Loss",	1, 0xc0, 0, 2, {"-3","-1","Ĭ��"} },
 
 	// DIP C
-	{ "ノ愑□,			1, 0x03, 0, 3, {"2","3","4","5"} },
-	{ "ヒ□ィ",			1, 0x04, 0, 1, dip_on_off     },
-	{ "テ箙ムモホヘ□,		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",			1, 0x03, 0, 3, {"2","3","4","5"} },
+	{ "����",			1, 0x04, 0, 1, dip_on_off     },
+	{ "�������",		1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",		1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝A",			1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカ芝B",			1, 0x38, 0, 7, dip_coin1      },
-	{ "□ハセ",			1, 0xc0, 0, 2, dip_cabinet    },
+	{ "Ͷ��A",			1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",			1, 0x38, 0, 7, dip_coin1      },
+	{ "�@ʾ",			1, 0xc0, 0, 2, dip_cabinet    },
 
 	// DIP B
-	{ "□カネ",							1, 0x07, 0, 7, dip_difficulty },
-	{ "ェт□愑□,						1, 0x30, 0, 3, {"2ネf,4ネf,テソ6ネf","3ネf,5ネf,テソ7ネf","2ネfコヘ6ネf","3ネfコヘ6ネf"} },
-	{ "Internal Diff. on Life Loss",	1, 0xc0, 0, 2, {"-3","-1","トャユJ"} },
+	{ "�y��",							1, 0x07, 0, 7, dip_difficulty },
+	{ "��������",						1, 0x30, 0, 3, {"2�f,4�f,ÿ6�f","3�f,5�f,ÿ7�f","2�f��6�f","3�f��6�f"} },
+	{ "Internal Diff. on Life Loss",	1, 0xc0, 0, 2, {"-3","-1","Ĭ�J"} },
 
 	// DIP C
-	{ "ノ愑□,			1, 0x03, 0, 3, {"2","3","4","5"} },
-	{ "詈カィ",			1, 0x04, 0, 1, dip_on_off     },
-	{ "テ籐M゜[ヘ□,		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",			1, 0x03, 0, 3, {"2","3","4","5"} },
+	{ "�i��",			1, 0x04, 0, 1, dip_on_off     },
+	{ "���M�[��",		1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",		1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coin A",         1, 0x07, 0, 7, dip_coin1      },
@@ -888,44 +888,44 @@ static dipswitch_t dipswitch_stridrua[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメA",			1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカアメB",			1, 0x38, 0, 7, dip_coin1      },
-	{ "マヤハセ",			1, 0xc0, 0, 2, dip_cabinet    },
+	{ "Ͷ��A",			1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",			1, 0x38, 0, 7, dip_coin1      },
+	{ "��ʾ",			1, 0xc0, 0, 2, dip_cabinet    },
 
 	// DIP B
-	{ "トムカネ",							1, 0x07, 0, 7, dip_difficulty },
-	{ "2アメソェハシ,1アメミ□リ",				1, 0x08, 0, 1, dip_on_off     },
-	{ "スアタ□愑□,						1, 0x30, 0, 3, {"2ヘ□4ヘ□テソ6ヘ□,"3ヘ□5ヘ□テソ7ヘ□,"2ヘ□ヘ6ヘ□,"3ヘ□ヘ6ヘ□} },
-	{ "Internal Diff. on Life Loss",	1, 0xc0, 0, 2, {"-3","-1","トャネマ"} },
+	{ "�Ѷ�",							1, 0x07, 0, 7, dip_difficulty },
+	{ "2�ҿ�ʼ,1������",				1, 0x08, 0, 1, dip_on_off     },
+	{ "��������",						1, 0x30, 0, 3, {"2��,4��,ÿ6��","3��,5��,ÿ7��","2���6��","3���6��"} },
+	{ "Internal Diff. on Life Loss",	1, 0xc0, 0, 2, {"-3","-1","Ĭ��"} },
 
 	// DIP C
-	{ "ノ愑□,			1, 0x03, 0, 3, {"2","3","4","5"} },
-	{ "ヒ□ィ",			1, 0x04, 0, 1, dip_on_off     },
-	{ "テ箙ムモホヘ□,		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",			1, 0x03, 0, 3, {"2","3","4","5"} },
+	{ "����",			1, 0x04, 0, 1, dip_on_off     },
+	{ "�������",		1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",		1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝A",			1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカ芝B",			1, 0x38, 0, 7, dip_coin1      },
-	{ "□ハセ",			1, 0xc0, 0, 2, dip_cabinet    },
+	{ "Ͷ��A",			1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",			1, 0x38, 0, 7, dip_coin1      },
+	{ "�@ʾ",			1, 0xc0, 0, 2, dip_cabinet    },
 
 	// DIP B
-	{ "□カネ",							1, 0x07, 0, 7, dip_difficulty },
-	{ "2芝饑ハシ,1芝タm鷄",				1, 0x08, 0, 1, dip_on_off     },
-	{ "ェт□愑□,						1, 0x30, 0, 3, {"2ネf,4ネf,テソ6ネf","3ネf,5ネf,テソ7ネf","2ネfコヘ6ネf","3ネfコヘ6ネf"} },
-	{ "Internal Diff. on Life Loss",	1, 0xc0, 0, 2, {"-3","-1","トャユJ"} },
+	{ "�y��",							1, 0x07, 0, 7, dip_difficulty },
+	{ "2���_ʼ,1���m�P",				1, 0x08, 0, 1, dip_on_off     },
+	{ "��������",						1, 0x30, 0, 3, {"2�f,4�f,ÿ6�f","3�f,5�f,ÿ7�f","2�f��6�f","3�f��6�f"} },
+	{ "Internal Diff. on Life Loss",	1, 0xc0, 0, 2, {"-3","-1","Ĭ�J"} },
 
 	// DIP C
-	{ "ノ愑□,			1, 0x03, 0, 3, {"2","3","4","5"} },
-	{ "詈カィ",			1, 0x04, 0, 1, dip_on_off     },
-	{ "テ籐M゜[ヘ□,		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",			1, 0x03, 0, 3, {"2","3","4","5"} },
+	{ "�i��",			1, 0x04, 0, 1, dip_on_off     },
+	{ "���M�[��",		1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",		1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coin A",         1, 0x07, 0, 7, dip_coin1      },
@@ -1054,36 +1054,36 @@ static dipswitch_t dipswitch_dynwar[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメA",			1, 0x07, 0, 7, dip_coin2      },
-	{ "ヘカアメB",			1, 0x38, 0, 7, dip_coin2      },
-	{ "テ箙ムモホヘ□,		1, 0x80, 0, 1, dip_on_off     },
+	{ "Ͷ��A",			1, 0x07, 0, 7, dip_coin2      },
+	{ "Ͷ��B",			1, 0x38, 0, 7, dip_coin2      },
+	{ "�������",		1, 0x80, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "トムカネ",			1, 0x07, 0, 7, dip_difficulty },
+	{ "�Ѷ�",			1, 0x07, 0, 7, dip_difficulty },
 
 	// DIP C
-	{ "ヒ□ィ",			1, 0x01, 0, 1, dip_on_off     },
-	{ "シモヒルト」ハス",		1, 0x02, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",			1, 0x01, 0, 1, dip_on_off     },
+	{ "����ģʽ",		1, 0x02, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",		1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝A",			1, 0x07, 0, 7, dip_coin2      },
-	{ "ヘカ芝B",			1, 0x38, 0, 7, dip_coin2      },
-	{ "テ籐M゜[ヘ□,		1, 0x80, 0, 1, dip_on_off     },
+	{ "Ͷ��A",			1, 0x07, 0, 7, dip_coin2      },
+	{ "Ͷ��B",			1, 0x38, 0, 7, dip_coin2      },
+	{ "���M�[��",		1, 0x80, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "□カネ",			1, 0x07, 0, 7, dip_difficulty },
+	{ "�y��",			1, 0x07, 0, 7, dip_difficulty },
 
 	// DIP C
-	{ "詈カィ",			1, 0x01, 0, 1, dip_on_off     },
-	{ "シモヒルト」ハス",		1, 0x02, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "�i��",			1, 0x01, 0, 1, dip_on_off     },
+	{ "����ģʽ",		1, 0x02, 0, 1, dip_on_off     },
+	{ "���D��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",		1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coin A",         1, 0x07, 0, 7, dip_coin2      },
@@ -1156,40 +1156,40 @@ static dipswitch_t dipswitch_willow[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメA",			1, 0x07, 0, 7, dip_coin2      },
-	{ "ヘカアメB",			1, 0x38, 0, 7, dip_coin2      },
-	{ "マヤハセ",			1, 0xc0, 0, 2, dip_cabinet    },
+	{ "Ͷ��A",			1, 0x07, 0, 7, dip_coin2      },
+	{ "Ͷ��B",			1, 0x38, 0, 7, dip_coin2      },
+	{ "��ʾ",			1, 0xc0, 0, 2, dip_cabinet    },
 
 	// DIP B
-	{ "トムカネ",					1, 0x07, 0, 7, dip_difficulty },
-	{ "Nando Speed",			1, 0x18, 0, 3, {"ツ□,"ニユヘィ","ソ□,"シォソ□}},
+	{ "�Ѷ�",					1, 0x07, 0, 7, dip_difficulty },
+	{ "Nando Speed",			1, 0x18, 0, 3, {"��","��ͨ","��","����"}},
 	{ "Stage Magic Continue",	1, 0x80, 0, 1, dip_on_off      },
 
 	// DIP C
-	{ "ノ愑□,			1, 0x03, 0, 3, {"1","2","3","4"} },
-	{ "ムェチソ",			1, 0x0c, 0, 3, {"2","3","4","5"} },
-	{ "キュラェニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",			1, 0x03, 0, 3, {"1","2","3","4"} },
+	{ "Ѫ��",			1, 0x0c, 0, 3, {"2","3","4","5"} },
+	{ "��ת��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",		1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝A",			1, 0x07, 0, 7, dip_coin2      },
-	{ "ヘカ芝B",			1, 0x38, 0, 7, dip_coin2      },
-	{ "□ハセ",			1, 0xc0, 0, 2, dip_cabinet    },
+	{ "Ͷ��A",			1, 0x07, 0, 7, dip_coin2      },
+	{ "Ͷ��B",			1, 0x38, 0, 7, dip_coin2      },
+	{ "�@ʾ",			1, 0xc0, 0, 2, dip_cabinet    },
 
 	// DIP B
-	{ "□カネ",					1, 0x07, 0, 7, dip_difficulty },
-	{ "Nando Speed",			1, 0x18, 0, 3, {"ツ□,"ニユヘィ","ソ□,"シォソ□}},
+	{ "�y��",					1, 0x07, 0, 7, dip_difficulty },
+	{ "Nando Speed",			1, 0x18, 0, 3, {"��","��ͨ","��","����"}},
 	{ "Stage Magic Continue",	1, 0x80, 0, 1, dip_on_off      },
 
 	// DIP C
-	{ "ノ愑□,			1, 0x03, 0, 3, {"1","2","3","4"} },
-	{ "ムェチソ",			1, 0x0c, 0, 3, {"2","3","4","5"} },
-	{ "キュ゛Dニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",			1, 0x03, 0, 3, {"1","2","3","4"} },
+	{ "Ѫ��",			1, 0x0c, 0, 3, {"2","3","4","5"} },
+	{ "���D��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",		1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coin A",         1, 0x07, 0, 7, dip_coin2      },
@@ -1304,36 +1304,36 @@ static dipswitch_t dipswitch_unsquad[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメA",			1, 0x07, 0, 7, dip_coin2      },
-	{ "ヘカアメB",			1, 0x38, 0, 7, dip_coin2      },
+	{ "Ͷ��A",			1, 0x07, 0, 7, dip_coin2      },
+	{ "Ͷ��B",			1, 0x38, 0, 7, dip_coin2      },
 
 	// DIP B
-	{ "トムカネ",			1, 0x07, 0, 7, dip_difficulty },
-	{ "ノヒコヲ",			1, 0x18, 0, 3, {"ミ。","ニユヘィ","エ□,"ラ□□}},
+	{ "�Ѷ�",			1, 0x07, 0, 7, dip_difficulty },
+	{ "�˺�",			1, 0x18, 0, 3, {"С","��ͨ","��","���"}},
 
 	// DIP C
-	{ "テ箙ムモホヘ□,		1, 0x04, 0, 1, dip_on_off     },
-	{ "ヒ□ィ",			1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "�������",		1, 0x04, 0, 1, dip_on_off     },
+	{ "����",			1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",		1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝A",			1, 0x07, 0, 7, dip_coin2      },
-	{ "ヘカ芝B",			1, 0x38, 0, 7, dip_coin2      },
+	{ "Ͷ��A",			1, 0x07, 0, 7, dip_coin2      },
+	{ "Ͷ��B",			1, 0x38, 0, 7, dip_coin2      },
 
 	// DIP B
-	{ "□カネ",			1, 0x07, 0, 7, dip_difficulty },
-	{ "□コヲ",			1, 0x18, 0, 3, {"ミ。","ニユヘィ","エ□,"ラ□□}},
+	{ "�y��",			1, 0x07, 0, 7, dip_difficulty },
+	{ "����",			1, 0x18, 0, 3, {"С","��ͨ","��","���"}},
 
 	// DIP C
-	{ "テ籐M゜[ヘ□,		1, 0x04, 0, 1, dip_on_off     },
-	{ "詈カィ",			1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "���M�[��",		1, 0x04, 0, 1, dip_on_off     },
+	{ "�i��",			1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",		1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coin A",         1, 0x07, 0, 7, dip_coin2      },
@@ -1418,42 +1418,42 @@ static dipswitch_t dipswitch_ffight[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメA",				1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカアメB",				1, 0x38, 0, 7, dip_coin1      },
-	{ "2アメソェハシ,1アメミ□リ",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��A",				1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",				1, 0x38, 0, 7, dip_coin1      },
+	{ "2�ҿ�ʼ,1������",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "トムカネシカア□",		1, 0x07, 0, 7, {"ラ□□・","ノヤシ□・","シ□・","ニユヘィ","ヨミオネ","タァトム","ノヤトム","ラ□ム"} },
-	{ "トムカネシカア□",		1, 0x18, 0, 3, {"シ□・","ニユヘィ","タァトム","ラ□ム"} },
-	{ "スアタ□愑□,		1, 0x60, 0, 3, {"10ヘ□,"20ヘ□,"10ヘ□テソ20ヘ□,"ボ"} },
+	{ "�Ѷȼ���1",		1, 0x07, 0, 7, {"���","�Լ�","��","��ͨ","�е�","����","����","����"} },
+	{ "�Ѷȼ���2",		1, 0x18, 0, 3, {"��","��ͨ","����","����"} },
+	{ "��������",		1, 0x60, 0, 3, {"10��","20��","10��,ÿ20��","��"} },
 
 	// DIP C
-	{ "ノ愑□,			1, 0x03, 0, 3, {"1","2","3","4"} },
-	{ "テ箙ムモホヘ□,		1, 0x04, 0, 1, dip_on_off     },
-	{ "ヒ□ィ",			1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",			1, 0x03, 0, 3, {"1","2","3","4"} },
+	{ "�������",		1, 0x04, 0, 1, dip_on_off     },
+	{ "����",			1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",		1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝A",				1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカ芝B",				1, 0x38, 0, 7, dip_coin1      },
-	{ "2芝饑ハシ,1芝タm鷄",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��A",				1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",				1, 0x38, 0, 7, dip_coin1      },
+	{ "2���_ʼ,1���m�P",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "□カネシ延e1",		1, 0x07, 0, 7, {"ラ□□ホ","ノヤコ□ホ","コ□ホ","ニユヘィ","ヨミオネ","タァ□","ノヤ□","ラ□y"} },
-	{ "□カネシ延e2",		1, 0x18, 0, 3, {"コ□ホ","ニユヘィ","タァ□","ラ□y"} },
-	{ "ェт□愑□,		1, 0x60, 0, 3, {"10ネf","20ネf","10ネf,テソ20ネf","殪"} },
+	{ "�y�ȼ��e1",		1, 0x07, 0, 7, {"���","�Ժ���","����","��ͨ","�е�","���y","���y","���y"} },
+	{ "�y�ȼ��e2",		1, 0x18, 0, 3, {"����","��ͨ","���y","���y"} },
+	{ "��������",		1, 0x60, 0, 3, {"10�f","20�f","10�f,ÿ20�f","�o"} },
 
 	// DIP C
-	{ "ノ愑□,			1, 0x03, 0, 3, {"1","2","3","4"} },
-	{ "テ籐M゜[ヘ□,		1, 0x04, 0, 1, dip_on_off     },
-	{ "詈カィ",			1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",			1, 0x03, 0, 3, {"1","2","3","4"} },
+	{ "���M�[��",		1, 0x04, 0, 1, dip_on_off     },
+	{ "�i��",			1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",		1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coin A",                          1, 0x07, 0, 7, dip_coin1      },
@@ -1571,44 +1571,44 @@ static dipswitch_t dipswitch_1941[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメA",				1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカアメB",				1, 0x38, 0, 7, dip_coin1      },
-	{ "2アメソェハシ,1アメミ□リ",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��A",				1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",				1, 0x38, 0, 7, dip_coin1      },
+	{ "2�ҿ�ʼ,1������",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "トムカネ",				1, 0x07, 0, 7, dip_difficulty },
-	{ "ノ□カハアシ□,			1, 0x18, 0, 3, {"ク□□,"サコツ□,"ソ□ル","ク□□} },
-	{ "ラモオッヒルカネ",			1, 0x60, 0, 3, {"キヌウ」ツ□,"ツ□,"ソ□,"キヌウ」ソ□} },
-	{ "ソェウ。ムェチソ",			1, 0x80, 0, 1, {"3ク□,"4ク□} },
+	{ "�Ѷ�",				1, 0x07, 0, 7, dip_difficulty },
+	{ "����ʱ��",			1, 0x18, 0, 3, {"����","����","����","����"} },
+	{ "�ӵ��ٶ�",			1, 0x60, 0, 3, {"�ǳ���","��","��","�ǳ���"} },
+	{ "����Ѫ��",			1, 0x80, 0, 1, {"3��","4��"} },
 
 	// DIP C
-	{ "マ゛ヨニモホマキヒルカネ",		1, 0x01, 0, 1, dip_on_off     },
-	{ "テ箙ムモホヘ□,			1, 0x04, 0, 1, dip_on_off     },
-	{ "ヒ□ィ",				1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",			1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,			1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",			1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",			1, 0x80, 0, 1, dip_game_mode  },
+	{ "������Ϸ�ٶ�",		1, 0x01, 0, 1, dip_on_off     },
+	{ "�������",			1, 0x04, 0, 1, dip_on_off     },
+	{ "����",				1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",			1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",			1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",			1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",			1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝A",				1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカ芝B",				1, 0x38, 0, 7, dip_coin1      },
-	{ "2芝饑ハシ,1芝タm鷄",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��A",				1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",				1, 0x38, 0, 7, dip_coin1      },
+	{ "2���_ʼ,1���m�P",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "□カネ",				1, 0x07, 0, 7, dip_difficulty },
-	{ "ノ□鴛r馮",			1, 0x18, 0, 3, {"ク□□,"セ渉□,"ソ□ル","ク□□} },
-	{ "ラモ女ヒルカネ",			1, 0x60, 0, 3, {"キヌウ」ツ□,"ツ□,"ソ□,"キヌウ」ソ□} },
-	{ "饑因ムェチソ",			1, 0x80, 0, 1, {"3ク□,"4ク□} },
+	{ "�y��",				1, 0x07, 0, 7, dip_difficulty },
+	{ "�����r�g",			1, 0x18, 0, 3, {"����","����","����","����"} },
+	{ "�ӏ��ٶ�",			1, 0x60, 0, 3, {"�ǳ���","��","��","�ǳ���"} },
+	{ "�_��Ѫ��",			1, 0x80, 0, 1, {"3��","4��"} },
 
 	// DIP C
-	{ "マ゛ヨニ゜[沢ヒルカネ",		1, 0x01, 0, 1, dip_on_off     },
-	{ "テ籐M゜[ヘ□,			1, 0x04, 0, 1, dip_on_off     },
-	{ "詈カィ",				1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",			1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,			1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",			1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",			1, 0x80, 0, 1, dip_game_mode  },
+	{ "�����[���ٶ�",		1, 0x01, 0, 1, dip_on_off     },
+	{ "���M�[��",			1, 0x04, 0, 1, dip_on_off     },
+	{ "�i��",				1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",			1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",			1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",			1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",			1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coin A",                          1, 0x07, 0, 7, dip_coin1      },
@@ -1717,36 +1717,36 @@ static dipswitch_t dipswitch_mercs[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメ",				1, 0x07, 0, 7, dip_coin1      },
-	{ "2アメソェハシ,1アメミ□リ",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��",				1, 0x07, 0, 7, dip_coin1      },
+	{ "2�ҿ�ʼ,1������",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "トムカネ",				1, 0x07, 0, 7, dip_difficulty },
-	{ "ヘカアメイロ",				1, 0x08, 0, 1, {"1","3"} },
-	{ "モホマキト」ハス",			1, 0x10, 0, 1, {"2ネヒ","3ネヒ"} },
+	{ "�Ѷ�",				1, 0x07, 0, 7, dip_difficulty },
+	{ "Ͷ�Ҳ�",				1, 0x08, 0, 1, {"1","3"} },
+	{ "��Ϸģʽ",			1, 0x10, 0, 1, {"2��","3��"} },
 
 	// DIP C
-	{ "ヒ□ィ",				1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",			1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,			1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",			1, 0x40, 0, 1, dip_yes_no     },
-	{ "オ□ヤト」ハス",			1, 0x80, 0, 1, dip_on_off     },
+	{ "����",				1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",			1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",			1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",			1, 0x40, 0, 1, dip_yes_no     },
+	{ "����ģʽ",			1, 0x80, 0, 1, dip_on_off     },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝",				1, 0x07, 0, 7, dip_coin1      },
-	{ "2芝饑ハシ,1芝タm鷄",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��",				1, 0x07, 0, 7, dip_coin1      },
+	{ "2���_ʼ,1���m�P",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "□カネ",				1, 0x07, 0, 7, dip_difficulty },
-	{ "ヘカ芝イロ",				1, 0x08, 0, 1, {"1","3"} },
-	{ "゜[沢ト」ハス",			1, 0x10, 0, 1, {"2ネヒ","3ネヒ"} },
+	{ "�y��",				1, 0x07, 0, 7, dip_difficulty },
+	{ "Ͷ�Ų�",				1, 0x08, 0, 1, {"1","3"} },
+	{ "�[��ģʽ",			1, 0x10, 0, 1, {"2��","3��"} },
 
 	// DIP C
-	{ "詈カィ",				1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",			1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,			1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",			1, 0x40, 0, 1, dip_yes_no     },
-	{ "ユ{ヤ□」ハス",			1, 0x80, 0, 1, dip_on_off     },
+	{ "�i��",				1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",			1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",			1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",			1, 0x40, 0, 1, dip_yes_no     },
+	{ "�{ԇģʽ",			1, 0x80, 0, 1, dip_on_off     },
 #else
 	// DIP A
 	{ "Coinage",                         1, 0x07, 0, 7, dip_coin1      },
@@ -1819,36 +1819,36 @@ static dipswitch_t dipswitch_mtwins[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメA",		1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカアメB",		1, 0x38, 0, 7, dip_coin1      },
+	{ "Ͷ��A",		1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",		1, 0x38, 0, 7, dip_coin1      },
 
 	// DIP B
-	{ "トムカネ",		1, 0x07, 0, 7, dip_difficulty },
-	{ "ノ愑□,		1, 0x38, 0, 3, {"1","2","3","4"} },
+	{ "�Ѷ�",		1, 0x07, 0, 7, dip_difficulty },
+	{ "����",		1, 0x38, 0, 3, {"1","2","3","4"} },
 
 	// DIP C
-	{ "テ箙ムモホヘ□,	1, 0x04, 0, 1, dip_on_off     },
-	{ "ヒ□ィ",		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",	1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,	1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",	1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "�������",	1, 0x04, 0, 1, dip_on_off     },
+	{ "����",		1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",	1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",	1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",	1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝A",		1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカ芝B",		1, 0x38, 0, 7, dip_coin1      },
+	{ "Ͷ��A",		1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",		1, 0x38, 0, 7, dip_coin1      },
 
 	// DIP B
-	{ "□カネ",		1, 0x07, 0, 7, dip_difficulty },
-	{ "ノ愑□,		1, 0x38, 0, 3, {"1","2","3","4"} },
+	{ "�y��",		1, 0x07, 0, 7, dip_difficulty },
+	{ "����",		1, 0x38, 0, 3, {"1","2","3","4"} },
 
 	// DIP C
-	{ "テ籐M゜[ヘ□,	1, 0x04, 0, 1, dip_on_off     },
-	{ "詈カィ",		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",	1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,	1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",	1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "���M�[��",	1, 0x04, 0, 1, dip_on_off     },
+	{ "�i��",		1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",	1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",	1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",	1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coin A",              1, 0x07, 0, 7, dip_coin1      },
@@ -1933,42 +1933,42 @@ static dipswitch_t dipswitch_msword[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメA",				1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカアメB",				1, 0x38, 0, 7, dip_coin1      },
-	{ "2アメソェハシ,1アメミ□リ",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��A",				1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",				1, 0x38, 0, 7, dip_coin1      },
+	{ "2�ҿ�ʼ,1������",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "ノヒコヲ",				1, 0x07, 0, 7, dip_difficulty },
-	{ "オミネヒムェチソコヘケ・サ□ヲ",	1, 0x38, 0, 7, dip_difficulty },
-	{ "ケリソィム。ヤ□,			1, 0x40, 0, 1, dip_on_off     },
+	{ "�˺�",				1, 0x07, 0, 7, dip_difficulty },
+	{ "����Ѫ���͹�����",	1, 0x38, 0, 7, dip_difficulty },
+	{ "�ؿ�ѡ��",			1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP C
-	{ "ムェー□,				1, 0x03, 0, 3, {"1","2","3(ミ□リハア-1)","4(ミ□リハア-1)"} },
-	{ "テ箙ムモホヘ□,			1, 0x04, 0, 1, dip_on_off     },
-	{ "ヒ□ィ",				1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",			1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,			1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",			1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",			1, 0x80, 0, 1, dip_game_mode  },
+	{ "Ѫ��",				1, 0x03, 0, 3, {"1","2","3(����ʱ-1)","4(����ʱ-1)"} },
+	{ "�������",			1, 0x04, 0, 1, dip_on_off     },
+	{ "����",				1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",			1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",			1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",			1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",			1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝A",				1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカ芝B",				1, 0x38, 0, 7, dip_coin1      },
-	{ "2芝饑ハシ,1芝タm鷄",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��A",				1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",				1, 0x38, 0, 7, dip_coin1      },
+	{ "2���_ʼ,1���m�P",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "□コヲ",				1, 0x07, 0, 7, dip_difficulty },
-	{ "筏ネヒムェチソコヘケ・迩チヲ",	1, 0x38, 0, 7, dip_difficulty },
-	{ "鷄ソィ゜x二",			1, 0x40, 0, 1, dip_on_off     },
+	{ "����",				1, 0x07, 0, 7, dip_difficulty },
+	{ "����Ѫ���͹�����",	1, 0x38, 0, 7, dip_difficulty },
+	{ "�P���x��",			1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP C
-	{ "ムェー□,				1, 0x03, 0, 3, {"1","2","3(タm鷄瓶-1)","4(タm鷄瓶-1)"} },
-	{ "テ籐M゜[ヘ□,			1, 0x04, 0, 1, dip_on_off     },
-	{ "詈カィ",				1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",			1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,			1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",			1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",			1, 0x80, 0, 1, dip_game_mode  },
+	{ "Ѫ��",				1, 0x03, 0, 3, {"1","2","3(�m�P�r-1)","4(�m�P�r-1)"} },
+	{ "���M�[��",			1, 0x04, 0, 1, dip_on_off     },
+	{ "�i��",				1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",			1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",			1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",			1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",			1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coin A",                          1, 0x07, 0, 7, dip_coin1      },
@@ -2082,38 +2082,38 @@ static dipswitch_t dipswitch_cawing[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメA",				1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカアメB",				1, 0x38, 0, 7, dip_coin1      },
-	{ "2アメソェハシ,1アメミ□リ",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��A",				1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",				1, 0x38, 0, 7, dip_coin1      },
+	{ "2�ҿ�ʼ,1������",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "トムカネ(オミキスサ□ヲ)",		1, 0x07, 0, 7, dip_difficulty },
-	{ "トムカネ(ヘ貍メサ□ヲ)",		1, 0x18, 0, 3, {"シ□・","ニユヘィ","タァトム","ラ□ム"} },
+	{ "�Ѷ�(�з�����)",		1, 0x07, 0, 7, dip_difficulty },
+	{ "�Ѷ�(��һ���)",		1, 0x18, 0, 3, {"��","��ͨ","����","����"} },
 
 	// DIP C
-	{ "テ箙ムモホヘ□,			1, 0x04, 0, 1, dip_on_off     },
-	{ "ヒ□ィ",				1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",			1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,			1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",			1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",			1, 0x80, 0, 1, dip_game_mode  },
+	{ "�������",			1, 0x04, 0, 1, dip_on_off     },
+	{ "����",				1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",			1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",			1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",			1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",			1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝A",				1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカ芝B",				1, 0x38, 0, 7, dip_coin1      },
-	{ "2芝饑ハシ,1芝タm鷄",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��A",				1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",				1, 0x38, 0, 7, dip_coin1      },
+	{ "2���_ʼ,1���m�P",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "□カネ(筏キスサ□ヲ)",		1, 0x07, 0, 7, dip_difficulty },
-	{ "□カネ(ヘ貍メサ□ヲ)",		1, 0x18, 0, 3, {"コ□ホ","ニユヘィ","タァ□","ラ□y"} },
+	{ "�y��(��������)",		1, 0x07, 0, 7, dip_difficulty },
+	{ "�y��(��һ���)",		1, 0x18, 0, 3, {"����","��ͨ","���y","���y"} },
 
 	// DIP C
-	{ "テ籐M゜[ヘ□,			1, 0x04, 0, 1, dip_on_off     },
-	{ "詈カィ",				1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",			1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,			1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",			1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",			1, 0x80, 0, 1, dip_game_mode  },
+	{ "���M�[��",			1, 0x04, 0, 1, dip_on_off     },
+	{ "�i��",				1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",			1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",			1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",			1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",			1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coin A",                          1, 0x07, 0, 7, dip_coin1      },
@@ -2201,40 +2201,40 @@ static dipswitch_t dipswitch_nemo[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメA",                          1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカアメB",                          1, 0x38, 0, 7, dip_coin1      },
-	{ "2アメソェハシ,1アメミ□リ",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��A",                          1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",                          1, 0x38, 0, 7, dip_coin1      },
+	{ "2�ҿ�ʼ,1������",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "トムカネ",		1, 0x07, 0, 7, dip_difficulty },
-	{ "ムェチソ",		1, 0x18, 0, 2, {"ラ□。","ヨミオネ","ラ□□} },
+	{ "�Ѷ�",		1, 0x07, 0, 7, dip_difficulty },
+	{ "Ѫ��",		1, 0x18, 0, 2, {"��С","�е�","���"} },
 
 	// DIP C
-	{ "ノ愑□,		1, 0x03, 0, 3, {"1","2","3","4"} },
-	{ "テ箙ムモホヘ□,	1, 0x04, 0, 1, dip_on_off     },
-	{ "ヒ□ィ",		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",	1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,	1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",	1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",		1, 0x03, 0, 3, {"1","2","3","4"} },
+	{ "�������",	1, 0x04, 0, 1, dip_on_off     },
+	{ "����",		1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",	1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",	1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",	1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝A",                          1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカ芝B",                          1, 0x38, 0, 7, dip_coin1      },
-	{ "2芝饑ハシ,1芝タm鷄",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��A",                          1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",                          1, 0x38, 0, 7, dip_coin1      },
+	{ "2���_ʼ,1���m�P",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "□カネ",		1, 0x07, 0, 7, dip_difficulty },
-	{ "ムェチソ",		1, 0x18, 0, 2, {"ラ□。","ヨミオネ","ラ□□} },
+	{ "�y��",		1, 0x07, 0, 7, dip_difficulty },
+	{ "Ѫ��",		1, 0x18, 0, 2, {"��С","�е�","���"} },
 
 	// DIP C
-	{ "ノ愑□,		1, 0x03, 0, 3, {"1","2","3","4"} },
-	{ "テ籐M゜[ヘ□,	1, 0x04, 0, 1, dip_on_off     },
-	{ "詈カィ",		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",	1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,	1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",	1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",		1, 0x03, 0, 3, {"1","2","3","4"} },
+	{ "���M�[��",	1, 0x04, 0, 1, dip_on_off     },
+	{ "�i��",		1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",	1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",	1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",	1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coin A",                          1, 0x07, 0, 7, dip_coin1      },
@@ -2335,36 +2335,36 @@ static dipswitch_t dipswitch_sf2[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメA",				1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカアメB",				1, 0x38, 0, 7, dip_coin1      },
-	{ "2アメソェハシ,1アメミ□リ", 	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��A",				1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",				1, 0x38, 0, 7, dip_coin1      },
+	{ "2�ҿ�ʼ,1������", 	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "トムカネ",				1, 0x07, 0, 7, dip_difficulty },
+	{ "�Ѷ�",				1, 0x07, 0, 7, dip_difficulty },
 
 	// DIP C
-	{ "テ箙ムモホヘ□,			1, 0x04, 0, 1, dip_on_off     },
-	{ "ヒ□ィ",				1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",			1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,			1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",			1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",			1, 0x80, 0, 1, dip_game_mode  },
+	{ "�������",			1, 0x04, 0, 1, dip_on_off     },
+	{ "����",				1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",			1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",			1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",			1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",			1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝A",				1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカ芝B",				1, 0x38, 0, 7, dip_coin1      },
-	{ "2芝饑ハシ,1芝タm鷄", 	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��A",				1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",				1, 0x38, 0, 7, dip_coin1      },
+	{ "2���_ʼ,1���m�P", 	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "□カネ",				1, 0x07, 0, 7, dip_difficulty },
+	{ "�y��",				1, 0x07, 0, 7, dip_difficulty },
 
 	// DIP C
-	{ "テ籐M゜[ヘ□,			1, 0x04, 0, 1, dip_on_off     },
-	{ "詈カィ",				1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",			1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,			1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",			1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",			1, 0x80, 0, 1, dip_game_mode  },
+	{ "���M�[��",			1, 0x04, 0, 1, dip_on_off     },
+	{ "�i��",				1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",			1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",			1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",			1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",			1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coin A",                          1, 0x07, 0, 7, dip_coin1      },
@@ -2391,38 +2391,38 @@ static dipswitch_t dipswitch_sf2j[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメA",				1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカアメB",				1, 0x38, 0, 7, dip_coin1      },
-	{ "2アメソェハシ,1アメミ□リ", 	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��A",				1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",				1, 0x38, 0, 7, dip_coin1      },
+	{ "2�ҿ�ʼ,1������", 	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "トムカネ",				1, 0x07, 0, 7, dip_difficulty },
-	{ "2ネヒモホマキ",			1, 0x08, 0, 1, {"1アメ/ボシフミ□,"2アメ/ハ、タ鋠゜シフミ□} },
+	{ "�Ѷ�",				1, 0x07, 0, 7, dip_difficulty },
+	{ "2����Ϸ",			1, 0x08, 0, 1, {"1��/�޼���","2��/ʤ���߼���"} },
 
 	// DIP C
-	{ "テ箙ムモホヘ□,			1, 0x04, 0, 1, dip_on_off     },
-	{ "ヒ□ィ",				1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",			1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,			1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",			1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",			1, 0x80, 0, 1, dip_game_mode  },
+	{ "�������",			1, 0x04, 0, 1, dip_on_off     },
+	{ "����",				1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",			1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",			1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",			1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",			1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝A",				1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカ芝B",				1, 0x38, 0, 7, dip_coin1      },
-	{ "2芝饑ハシ,1芝タm鷄", 	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��A",				1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",				1, 0x38, 0, 7, dip_coin1      },
+	{ "2���_ʼ,1���m�P", 	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "□カネ",				1, 0x07, 0, 7, dip_difficulty },
-	{ "2ネピ[沢",			1, 0x08, 0, 1, {"1芝/殪タ^タm","2芝/□タ鋠゜タ^タm"} },
+	{ "�y��",				1, 0x07, 0, 7, dip_difficulty },
+	{ "2���[��",			1, 0x08, 0, 1, {"1��/�o�^�m","2��/�������^�m"} },
 
 	// DIP C
-	{ "テ籐M゜[ヘ□,			1, 0x04, 0, 1, dip_on_off     },
-	{ "詈カィ",				1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",			1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,			1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",			1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",			1, 0x80, 0, 1, dip_game_mode  },
+	{ "���M�[��",			1, 0x04, 0, 1, dip_on_off     },
+	{ "�i��",				1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",			1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",			1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",			1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",			1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coin A",                          1, 0x07, 0, 7, dip_coin1      },
@@ -2502,44 +2502,44 @@ static dipswitch_t dipswitch_3wonders[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメA",				1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカアメAB",				1, 0x38, 0, 7, dip_coin1      },
-	{ "2アメソェハシ,1アメミ□リ",	1, 0x40, 0, 1, dip_on_off     },
-	{ "ヒ□ィ",				1, 0x80, 0, 1, dip_on_off     },
+	{ "Ͷ��A",				1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��AB",				1, 0x38, 0, 7, dip_coin1      },
+	{ "2�ҿ�ʼ,1������",	1, 0x40, 0, 1, dip_on_off     },
+	{ "����",				1, 0x80, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "ノ愑□Midnight Wanderers)",      1, 0x03, 0, 3, {"1","2","3","5"} },
-	{ "トムカネ(Midnight Wanderers)", 1, 0x0c, 0, 3, {"シ□・","ニユヘィ","タァトム","ラ□ム"} },
-	{ "ノ愑□Chariot)",                 1, 0x30, 0, 3, {"1","2","3","5"} },
-	{ "トムカネ(Chariot)",            1, 0xc0, 0, 3, {"シ□・","ニユヘィ","タァトム","ラ□ム"} },
+	{ "����(Midnight Wanderers)",      1, 0x03, 0, 3, {"1","2","3","5"} },
+	{ "�Ѷ�(Midnight Wanderers)", 1, 0x0c, 0, 3, {"��","��ͨ","����","����"} },
+	{ "����(Chariot)",                 1, 0x30, 0, 3, {"1","2","3","5"} },
+	{ "�Ѷ�(Chariot)",            1, 0xc0, 0, 3, {"��","��ͨ","����","����"} },
 
 	// DIP C
-	{ "ノ愑□Don't Pull)",	1, 0x03, 0, 3, {"1","2","3","5"} },
-	{ "トムカネ(Don't Pull)",	1, 0x08, 0, 3, {"シ□・","ニユヘィ","タァトム","ラ□ム"} },
-	{ "キュラェニチトサ",			1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,			1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",			1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",			1, 0x80, 0, 1, dip_game_mode  },
+	{ "����(Don't Pull)",	1, 0x03, 0, 3, {"1","2","3","5"} },
+	{ "�Ѷ�(Don't Pull)",	1, 0x08, 0, 3, {"��","��ͨ","����","����"} },
+	{ "��ת��Ļ",			1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",			1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",			1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",			1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝A",				1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカ芝AB",				1, 0x38, 0, 7, dip_coin1      },
-	{ "2芝饑ハシ,1芝タm鷄",	1, 0x40, 0, 1, dip_on_off     },
-	{ "詈カィ",				1, 0x80, 0, 1, dip_on_off     },
+	{ "Ͷ��A",				1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��AB",				1, 0x38, 0, 7, dip_coin1      },
+	{ "2���_ʼ,1���m�P",	1, 0x40, 0, 1, dip_on_off     },
+	{ "�i��",				1, 0x80, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "ノ愑□Midnight Wanderers)",      1, 0x03, 0, 3, {"1","2","3","5"} },
-	{ "□カネ(Midnight Wanderers)", 1, 0x0c, 0, 3, {"コ□ホ","ニユヘィ","タァ□","ラ□y"} },
-	{ "ノ愑□Chariot)",                 1, 0x30, 0, 3, {"1","2","3","5"} },
-	{ "□カネ(Chariot)",            1, 0xc0, 0, 3, {"コ□ホ","ニユヘィ","タァ□","ラ□y"} },
+	{ "����(Midnight Wanderers)",      1, 0x03, 0, 3, {"1","2","3","5"} },
+	{ "�y��(Midnight Wanderers)", 1, 0x0c, 0, 3, {"����","��ͨ","���y","���y"} },
+	{ "����(Chariot)",                 1, 0x30, 0, 3, {"1","2","3","5"} },
+	{ "�y��(Chariot)",            1, 0xc0, 0, 3, {"����","��ͨ","���y","���y"} },
 
 	// DIP C
-	{ "ノ愑□Don't Pull)",	1, 0x03, 0, 3, {"1","2","3","5"} },
-	{ "□カネ(Don't Pull)",	1, 0x08, 0, 3, {"コ□ホ","ニユヘィ","タァ□","ラ□y"} },
-	{ "キュ゛Dニチトサ",			1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,			1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",			1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",			1, 0x80, 0, 1, dip_game_mode  },
+	{ "����(Don't Pull)",	1, 0x03, 0, 3, {"1","2","3","5"} },
+	{ "�y��(Don't Pull)",	1, 0x08, 0, 3, {"����","��ͨ","���y","���y"} },
+	{ "���D��Ļ",			1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",			1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",			1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",			1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coin A",                          1, 0x07, 0, 7, dip_coin1      },
@@ -2696,42 +2696,42 @@ static dipswitch_t dipswitch_kod[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメ",				1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカアメイロ",				1, 0x08, 0, 1, {"1","3"}      },
-	{ "モホヘ貽」ハス",			1, 0x10, 0, 1, {"2ネヒ","3ネヒ"} },
-	{ "2アメソェハシ,1アメミ□リ",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��",				1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ�Ҳ�",				1, 0x08, 0, 1, {"1","3"}      },
+	{ "����ģʽ",			1, 0x10, 0, 1, {"2��","3��"} },
+	{ "2�ҿ�ʼ,1������",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "トムカネ",		1, 0x07, 0, 7, dip_difficulty },
-	{ "ノ愑□,		1, 0x38, 0, 7, {"1","2","3","4","5","6","7","8"} },
-	{ "スアタ□愑□,	1, 0xc0, 0, 3, {"8ヘ□テソエホ40ヘ□,"10ヘ□テソ45ヘ□,"16ヘ□テソ45ヘ□,"ボ"} },
+	{ "�Ѷ�",		1, 0x07, 0, 7, dip_difficulty },
+	{ "����",		1, 0x38, 0, 7, {"1","2","3","4","5","6","7","8"} },
+	{ "��������",	1, 0xc0, 0, 3, {"8��,ÿ��40��","10��,ÿ45��","16��,ÿ45��","��"} },
 
 	// DIP C
-	{ "テ箙ムモホヘ□,		1, 0x04, 0, 1, dip_on_off     },
-	{ "ヒ□ィ",			1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "�������",		1, 0x04, 0, 1, dip_on_off     },
+	{ "����",			1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",		1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝",				1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカ芝イロ",				1, 0x08, 0, 1, {"1","3"}      },
-	{ "゜[ヘ貽」ハス",			1, 0x10, 0, 1, {"2ネヒ","3ネヒ"} },
-	{ "2芝饑ハシ,1芝タm鷄",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��",				1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ�Ų�",				1, 0x08, 0, 1, {"1","3"}      },
+	{ "�[��ģʽ",			1, 0x10, 0, 1, {"2��","3��"} },
+	{ "2���_ʼ,1���m�P",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "□カネ",		1, 0x07, 0, 7, dip_difficulty },
-	{ "ノ愑□,		1, 0x38, 0, 7, {"1","2","3","4","5","6","7","8"} },
-	{ "ェт□愑□,	1, 0xc0, 0, 3, {"8ネf,テソエホ40ネf","10ネf,テソ45ネf","16ネf,テソ45ネf","殪"} },
+	{ "�y��",		1, 0x07, 0, 7, dip_difficulty },
+	{ "����",		1, 0x38, 0, 7, {"1","2","3","4","5","6","7","8"} },
+	{ "��������",	1, 0xc0, 0, 3, {"8�f,ÿ��40�f","10�f,ÿ45�f","16�f,ÿ45�f","�o"} },
 
 	// DIP C
-	{ "テ籐M゜[ヘ□,		1, 0x04, 0, 1, dip_on_off     },
-	{ "詈カィ",			1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "���M�[��",		1, 0x04, 0, 1, dip_on_off     },
+	{ "�i��",			1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",		1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coinage",                         1, 0x07, 0, 7, dip_coin1      },
@@ -2761,42 +2761,42 @@ static dipswitch_t dipswitch_kodj[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメ",				1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカアメイロ",				1, 0x08, 0, 1, {"1","3"}      },
-	{ "モホヘ貽」ハス",			1, 0x10, 0, 1, {"2ネヒ","3ネヒ"} },
-	{ "2アメソェハシ,1アメミ□リ",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��",				1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ�Ҳ�",				1, 0x08, 0, 1, {"1","3"}      },
+	{ "����ģʽ",			1, 0x10, 0, 1, {"2��","3��"} },
+	{ "2�ҿ�ʼ,1������",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "トムカネ",		1, 0x07, 0, 7, dip_difficulty },
-	{ "ノ愑□,		1, 0x38, 0, 7, {"1","2","3","4","5","6","7","8"} },
-	{ "スアタ□愑□,	1, 0xc0, 0, 3, {"8ヘ□テソエホ40ヘ□,"20ヘ□テソ45ヘ□,"16ヘ□テソ45ヘ□,"ボ"} },
+	{ "�Ѷ�",		1, 0x07, 0, 7, dip_difficulty },
+	{ "����",		1, 0x38, 0, 7, {"1","2","3","4","5","6","7","8"} },
+	{ "��������",	1, 0xc0, 0, 3, {"8��,ÿ��40��","20��,ÿ45��","16��,ÿ45��","��"} },
 
 	// DIP C
-	{ "テ箙ムモホヘ□,		1, 0x04, 0, 1, dip_on_off     },
-	{ "ヒ□ィ",			1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "�������",		1, 0x04, 0, 1, dip_on_off     },
+	{ "����",			1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",		1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝",				1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカ芝イロ",				1, 0x08, 0, 1, {"1","3"}      },
-	{ "゜[ヘ貽」ハス",			1, 0x10, 0, 1, {"2ネヒ","3ネヒ"} },
-	{ "2芝饑ハシ,1芝タm鷄",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��",				1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ�Ų�",				1, 0x08, 0, 1, {"1","3"}      },
+	{ "�[��ģʽ",			1, 0x10, 0, 1, {"2��","3��"} },
+	{ "2���_ʼ,1���m�P",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "□カネ",		1, 0x07, 0, 7, dip_difficulty },
-	{ "ノ愑□,		1, 0x38, 0, 7, {"1","2","3","4","5","6","7","8"} },
-	{ "ェт□愑□,	1, 0xc0, 0, 3, {"8ネf,テソエホ40ネf","20ネf,テソ45ネf","16ネf,テソ45ネf","殪"} },
+	{ "�y��",		1, 0x07, 0, 7, dip_difficulty },
+	{ "����",		1, 0x38, 0, 7, {"1","2","3","4","5","6","7","8"} },
+	{ "��������",	1, 0xc0, 0, 3, {"8�f,ÿ��40�f","20�f,ÿ45�f","16�f,ÿ45�f","�o"} },
 
 	// DIP C
-	{ "テ籐M゜[ヘ□,		1, 0x04, 0, 1, dip_on_off     },
-	{ "詈カィ",			1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",		1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,		1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",		1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",		1, 0x80, 0, 1, dip_game_mode  },
+	{ "���M�[��",		1, 0x04, 0, 1, dip_on_off     },
+	{ "�i��",			1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",		1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",		1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",		1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",		1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coinage",                         1, 0x07, 0, 7, dip_coin1      },
@@ -2914,40 +2914,40 @@ static dipswitch_t dipswitch_captcomm[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメ",				1, 0x07, 0, 7, dip_coin1      },
-	{ "2アメソェハシ,1アメミ□リ",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��",				1, 0x07, 0, 7, dip_coin1      },
+	{ "2�ҿ�ʼ,1������",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "トムカネ1",		1, 0x07, 0, 7, dip_difficulty },
-	{ "トムカネ2",		1, 0x18, 0, 3, {"シ□・","ニユヘィ","タァトム","ラ□ム"} },
-	{ "モホヘ貽」ハス",	1, 0xc0, 0, 3, {"1ネヒ","2ネヒ","3ネヒ","4ネヒ"} },
+	{ "�Ѷ�1",		1, 0x07, 0, 7, dip_difficulty },
+	{ "�Ѷ�2",		1, 0x18, 0, 3, {"��","��ͨ","����","����"} },
+	{ "����ģʽ",	1, 0xc0, 0, 3, {"1��","2��","3��","4��"} },
 
 	// DIP C
-	{ "ノ愑□,		1, 0x03, 0, 3, {"1","2","3","4"} },
-	{ "テ箙ムモホヘ□,	1, 0x04, 0, 1, dip_on_off     },
-	{ "ヒ□ィ",		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",	1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,	1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",	1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",		1, 0x03, 0, 3, {"1","2","3","4"} },
+	{ "�������",	1, 0x04, 0, 1, dip_on_off     },
+	{ "����",		1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",	1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",	1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",	1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝",				1, 0x07, 0, 7, dip_coin1      },
-	{ "2芝饑ハシ,1芝タm鷄",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��",				1, 0x07, 0, 7, dip_coin1      },
+	{ "2���_ʼ,1���m�P",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "□カネ1",		1, 0x07, 0, 7, dip_difficulty },
-	{ "□カネ2",		1, 0x18, 0, 3, {"コ□ホ","ニユヘィ","タァ□","ラ□y"} },
-	{ "゜[ヘ貽」ハス",	1, 0xc0, 0, 3, {"1ネヒ","2ネヒ","3ネヒ","4ネヒ"} },
+	{ "�y��1",		1, 0x07, 0, 7, dip_difficulty },
+	{ "�y��2",		1, 0x18, 0, 3, {"����","��ͨ","���y","���y"} },
+	{ "�[��ģʽ",	1, 0xc0, 0, 3, {"1��","2��","3��","4��"} },
 
 	// DIP C
-	{ "ノ愑□,		1, 0x03, 0, 3, {"1","2","3","4"} },
-	{ "テ籐M゜[ヘ□,	1, 0x04, 0, 1, dip_on_off     },
-	{ "詈カィ",		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",	1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,	1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",	1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",		1, 0x03, 0, 3, {"1","2","3","4"} },
+	{ "���M�[��",	1, 0x04, 0, 1, dip_on_off     },
+	{ "�i��",		1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",	1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",	1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",	1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coinage",                         1, 0x07, 0, 7, dip_coin1      },
@@ -3062,42 +3062,42 @@ static dipswitch_t dipswitch_knights[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメ",				1, 0x07, 0, 7, dip_coin1      },
-	{ "2アメソェハシ,1アメミ□リ",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��",				1, 0x07, 0, 7, dip_coin1      },
+	{ "2�ҿ�ʼ,1������",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "オミキスケ・サ□オツハ",	1, 0x07, 0, 7, dip_difficulty },
-	{ "オミキスケ・サ□ヲチソ",	1, 0x38, 0, 7, dip_difficulty },
-	{ "ヘカアメイロ",			1, 0x40, 0, 1, {"1","3"}      },
-	{ "モホヘ貽」ハス",		1, 0x80, 0, 1, {"2ネヒ","3ネヒ"} },
+	{ "�з�����Ƶ��",	1, 0x07, 0, 7, dip_difficulty },
+	{ "�з���������",	1, 0x38, 0, 7, dip_difficulty },
+	{ "Ͷ�Ҳ�",			1, 0x40, 0, 1, {"1","3"}      },
+	{ "����ģʽ",		1, 0x80, 0, 1, {"2��","3��"} },
 
 	// DIP C
-	{ "ノ愑□,		1, 0x03, 0, 3, {"1","2","3","4"} },
-	{ "テ箙ムモホヘ□,	1, 0x04, 0, 1, dip_on_off     },
-	{ "ヒ□ィ",		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",	1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,	1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",	1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",		1, 0x03, 0, 3, {"1","2","3","4"} },
+	{ "�������",	1, 0x04, 0, 1, dip_on_off     },
+	{ "����",		1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",	1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",	1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",	1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝",				1, 0x07, 0, 7, dip_coin1      },
-	{ "2芝饑ハシ,1芝タm鷄",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��",				1, 0x07, 0, 7, dip_coin1      },
+	{ "2���_ʼ,1���m�P",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "筏キスケ・迩□ツハ",	1, 0x07, 0, 7, dip_difficulty },
-	{ "筏キスケ・迩チヲチソ",	1, 0x38, 0, 7, dip_difficulty },
-	{ "ヘカ芝イロ",			1, 0x40, 0, 1, {"1","3"}      },
-	{ "゜[ヘ貽」ハス",		1, 0x80, 0, 1, {"2ネヒ","3ネヒ"} },
+	{ "���������l��",	1, 0x07, 0, 7, dip_difficulty },
+	{ "������������",	1, 0x38, 0, 7, dip_difficulty },
+	{ "Ͷ�Ų�",			1, 0x40, 0, 1, {"1","3"}      },
+	{ "�[��ģʽ",		1, 0x80, 0, 1, {"2��","3��"} },
 
 	// DIP C
-	{ "ノ愑□,		1, 0x03, 0, 3, {"1","2","3","4"} },
-	{ "テ籐M゜[ヘ□,	1, 0x04, 0, 1, dip_on_off     },
-	{ "詈カィ",		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",	1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,	1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",	1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",		1, 0x03, 0, 3, {"1","2","3","4"} },
+	{ "���M�[��",	1, 0x04, 0, 1, dip_on_off     },
+	{ "�i��",		1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",	1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",	1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",	1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coinage",                         1, 0x07, 0, 7, dip_coin1      },
@@ -3211,40 +3211,40 @@ static dipswitch_t dipswitch_varth[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメA",				1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカアメB",				1, 0x38, 0, 7, dip_coin1      },
-	{ "2アメソェハシ,1アメミ□リ",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��A",				1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",				1, 0x38, 0, 7, dip_coin1      },
+	{ "2�ҿ�ʼ,1������",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "トムカネ",		1, 0x07, 0, 7, dip_difficulty },
-	{ "スアタ□愑□,	1, 0x18, 0, 3, {"60ヘ□テソ140ヘ□,"60ヘ□200ヘ□450ヘ□,"120ヘ□350ヘ□,"200ヘ□} },
+	{ "�Ѷ�",		1, 0x07, 0, 7, dip_difficulty },
+	{ "��������",	1, 0x18, 0, 3, {"60��,ÿ140��","60��,200��,450��","120��,350��","200��"} },
 
 	// DIP C
-	{ "ノ愑□,		1, 0x03, 0, 3, {"1","2","3","4"} },
-	{ "テ箙ムモホヘ□,	1, 0x04, 0, 1, dip_on_off     },
-	{ "ヒ□ィ",		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",	1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,	1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",	1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",		1, 0x03, 0, 3, {"1","2","3","4"} },
+	{ "�������",	1, 0x04, 0, 1, dip_on_off     },
+	{ "����",		1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",	1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",	1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",	1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝A",				1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカ芝B",				1, 0x38, 0, 7, dip_coin1      },
-	{ "2芝饑ハシ,1芝タm鷄",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��A",				1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ��B",				1, 0x38, 0, 7, dip_coin1      },
+	{ "2���_ʼ,1���m�P",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "□カネ",		1, 0x07, 0, 7, dip_difficulty },
-	{ "ェт□愑□,	1, 0x18, 0, 3, {"60ネf,テソ140ネf","60ネf,200ネf,450ネf","120ネf,350ネf","200ネf"} },
+	{ "�y��",		1, 0x07, 0, 7, dip_difficulty },
+	{ "��������",	1, 0x18, 0, 3, {"60�f,ÿ140�f","60�f,200�f,450�f","120�f,350�f","200�f"} },
 
 	// DIP C
-	{ "ノ愑□,		1, 0x03, 0, 3, {"1","2","3","4"} },
-	{ "テ籐M゜[ヘ□,	1, 0x04, 0, 1, dip_on_off     },
-	{ "詈カィ",		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",	1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,	1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",	1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",		1, 0x03, 0, 3, {"1","2","3","4"} },
+	{ "���M�[��",	1, 0x04, 0, 1, dip_on_off     },
+	{ "�i��",		1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",	1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",	1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",	1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coin A",                          1, 0x07, 0, 7, dip_coin1      },
@@ -3347,40 +3347,40 @@ static dipswitch_t dipswitch_cworld2j[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメA",				1, 0x07, 0, 7, dip_coin1      },
-	{ "2アメソェハシ,1アメミ□リ",	1, 0x40, 0, 1, dip_on_off     },
-	{ "エ□ェイ簗ヤト」ハス",		1, 0x80, 0, 1, dip_on_off     },
+	{ "Ͷ��A",				1, 0x07, 0, 7, dip_coin1      },
+	{ "2�ҿ�ʼ,1������",	1, 0x40, 0, 1, dip_on_off     },
+	{ "�򿪲���ģʽ",		1, 0x80, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "トムカネ",		1, 0x07, 0, 4, {"ラ□□・","シ□・","ニユヘィ","タァトム","ラ□ム"} },
+	{ "�Ѷ�",		1, 0x07, 0, 4, {"���","��","��ͨ","����","����"} },
 	{ "Extend",		1, 0x18, 0, 2, {"N","E","D"} },
-	{ "ノ愑□,		1, 0xe0, 0, 4, {"1","2","3","4","5"} },
+	{ "����",		1, 0xe0, 0, 4, {"1","2","3","4","5"} },
 
 	// DIP C
-	{ "テ箙ムモホヘ□,	1, 0x04, 0, 1, dip_on_off     },
-	{ "ヒ□ィ",		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",	1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,	1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",	1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "�������",	1, 0x04, 0, 1, dip_on_off     },
+	{ "����",		1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",	1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",	1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",	1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝A",				1, 0x07, 0, 7, dip_coin1      },
-	{ "2芝饑ハシ,1芝タm鷄",	1, 0x40, 0, 1, dip_on_off     },
-	{ "エ□_忱ヤ□」ハス",		1, 0x80, 0, 1, dip_on_off     },
+	{ "Ͷ��A",				1, 0x07, 0, 7, dip_coin1      },
+	{ "2���_ʼ,1���m�P",	1, 0x40, 0, 1, dip_on_off     },
+	{ "���_�yԇģʽ",		1, 0x80, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "□カネ",		1, 0x07, 0, 4, {"ラ□□ホ","コ□ホ","ニユヘィ","タァ□","ラ□y"} },
+	{ "�y��",		1, 0x07, 0, 4, {"���","����","��ͨ","���y","���y"} },
 	{ "Extend",		1, 0x18, 0, 2, {"N","E","D"} },
-	{ "ノ愑□,		1, 0xe0, 0, 4, {"1","2","3","4","5"} },
+	{ "����",		1, 0xe0, 0, 4, {"1","2","3","4","5"} },
 
 	// DIP C
-	{ "テ籐M゜[ヘ□,	1, 0x04, 0, 1, dip_on_off     },
-	{ "詈カィ",		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",	1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,	1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",	1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "���M�[��",	1, 0x04, 0, 1, dip_on_off     },
+	{ "�i��",		1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",	1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",	1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",	1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coin A",                          1, 0x07, 0, 7, dip_coin1      },
@@ -3497,40 +3497,40 @@ static dipswitch_t dipswitch_qad[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメ",				1, 0x07, 0, 7, dip_coin1      },
-	{ "2アメソェハシ,1アメミ□リ",	1, 0x40, 0, 1, dip_on_off     },
-	{ "エ□ェイ簗ヤト」ハス",		1, 0x80, 0, 1, dip_on_off     },
+	{ "Ͷ��",				1, 0x07, 0, 7, dip_coin1      },
+	{ "2�ҿ�ʼ,1������",	1, 0x40, 0, 1, dip_on_off     },
+	{ "�򿪲���ģʽ",		1, 0x80, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "トムカネ",		1, 0x07, 0, 4, {"ラ□□・","シ□・","ニユヘィ","タァトム","ラ□ム"} },
-	{ "ヨェハカ",		1, 0x18, 0, 3, {"シ□・","ニユヘィ","タァトム","ラ□ム"} },
-	{ "ノ愑□,		1, 0xe0, 0, 4, {"1","2","3","4","5"} },
+	{ "�Ѷ�",		1, 0x07, 0, 4, {"���","��","��ͨ","����","����"} },
+	{ "֪ʶ",		1, 0x18, 0, 3, {"��","��ͨ","����","����"} },
+	{ "����",		1, 0xe0, 0, 4, {"1","2","3","4","5"} },
 
 	// DIP C
-	{ "テ箙ムモホヘ□,	1, 0x04, 0, 1, dip_on_off     },
-	{ "ヒ□ィ",		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",	1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,	1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",	1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "�������",	1, 0x04, 0, 1, dip_on_off     },
+	{ "����",		1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",	1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",	1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",	1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝",				1, 0x07, 0, 7, dip_coin1      },
-	{ "2芝饑ハシ,1芝タm鷄",	1, 0x40, 0, 1, dip_on_off     },
-	{ "エ□_忱ヤ□」ハス",		1, 0x80, 0, 1, dip_on_off     },
+	{ "Ͷ��",				1, 0x07, 0, 7, dip_coin1      },
+	{ "2���_ʼ,1���m�P",	1, 0x40, 0, 1, dip_on_off     },
+	{ "���_�yԇģʽ",		1, 0x80, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "□カネ",		1, 0x07, 0, 4, {"ラ□□ホ","コ□ホ","ニユヘィ","タァ□","ラ□y"} },
-	{ "ヨェラR",		1, 0x18, 0, 3, {"コ□ホ","ニユヘィ","タァ□","ラ□y"} },
-	{ "ノ愑□,		1, 0xe0, 0, 4, {"1","2","3","4","5"} },
+	{ "�y��",		1, 0x07, 0, 4, {"���","����","��ͨ","���y","���y"} },
+	{ "֪�R",		1, 0x18, 0, 3, {"����","��ͨ","���y","���y"} },
+	{ "����",		1, 0xe0, 0, 4, {"1","2","3","4","5"} },
 
 	// DIP C
-	{ "テ籐M゜[ヘ□,	1, 0x04, 0, 1, dip_on_off     },
-	{ "詈カィ",		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",	1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,	1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",	1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "���M�[��",	1, 0x04, 0, 1, dip_on_off     },
+	{ "�i��",		1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",	1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",	1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",	1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coinage",                         1, 0x07, 0, 7, dip_coin1      },
@@ -3559,38 +3559,38 @@ static dipswitch_t dipswitch_qadj[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメ",				1, 0x07, 0, 7, dip_coin1      },
-	{ "2アメソェハシ,1アメミ□リ",	1, 0x40, 0, 1, dip_on_off     },
-	{ "エ□ェイ簗ヤト」ハス",		1, 0x80, 0, 1, dip_on_off     },
+	{ "Ͷ��",				1, 0x07, 0, 7, dip_coin1      },
+	{ "2�ҿ�ʼ,1������",	1, 0x40, 0, 1, dip_on_off     },
+	{ "�򿪲���ģʽ",		1, 0x80, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "トムカネ",		1, 0x07, 0, 4, {"ラ□□・","シ□・","ニユヘィ","タァトム","ラ□ム"} },
-	{ "ノ愑□,		1, 0xe0, 0, 2, {"1","2","3"} },
+	{ "�Ѷ�",		1, 0x07, 0, 4, {"���","��","��ͨ","����","����"} },
+	{ "����",		1, 0xe0, 0, 2, {"1","2","3"} },
 
 	// DIP C
-	{ "テ箙ムモホヘ□,	1, 0x04, 0, 1, dip_on_off     },
-	{ "ヒ□ィ",		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",	1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,	1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",	1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "�������",	1, 0x04, 0, 1, dip_on_off     },
+	{ "����",		1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",	1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",	1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",	1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝",				1, 0x07, 0, 7, dip_coin1      },
-	{ "2芝饑ハシ,1芝タm鷄",	1, 0x40, 0, 1, dip_on_off     },
-	{ "エ□_忱ヤ□」ハス",		1, 0x80, 0, 1, dip_on_off     },
+	{ "Ͷ��",				1, 0x07, 0, 7, dip_coin1      },
+	{ "2���_ʼ,1���m�P",	1, 0x40, 0, 1, dip_on_off     },
+	{ "���_�yԇģʽ",		1, 0x80, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "□カネ",		1, 0x07, 0, 4, {"ラ□□ホ","コ□ホ","ニユヘィ","タァ□","ラ□y"} },
-	{ "ノ愑□,		1, 0xe0, 0, 2, {"1","2","3"} },
+	{ "�y��",		1, 0x07, 0, 4, {"���","����","��ͨ","���y","���y"} },
+	{ "����",		1, 0xe0, 0, 2, {"1","2","3"} },
 
 	// DIP C
-	{ "テ籐M゜[ヘ□,	1, 0x04, 0, 1, dip_on_off     },
-	{ "詈カィ",		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",	1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,	1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",	1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "���M�[��",	1, 0x04, 0, 1, dip_on_off     },
+	{ "�i��",		1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",	1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",	1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",	1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coinage",                         1, 0x07, 0, 7, dip_coin1      },
@@ -3772,38 +3772,38 @@ static dipswitch_t dipswitch_qtono2[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメ",				1, 0x07, 0, 7, dip_coin1      },
-	{ "2アメソェハシ,1アメミ□リ",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��",				1, 0x07, 0, 7, dip_coin1      },
+	{ "2�ҿ�ʼ,1������",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "トムカネ",		1, 0x07, 0, 7, dip_difficulty },
-	{ "ノ愑□,		1, 0xe0, 0, 4, {"1","2","3","4","5"} },
+	{ "�Ѷ�",		1, 0x07, 0, 7, dip_difficulty },
+	{ "����",		1, 0xe0, 0, 4, {"1","2","3","4","5"} },
 
 	// DIP C
-	{ "ボマ゛ノ愑□ス□ヨヨク)",	1, 0x02, 0, 1, dip_on_off     },
-	{ "テ箙ムモホヘ□,			1, 0x04, 0, 1, dip_on_off     },
-	{ "ヒ□ィ",				1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",			1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,			1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",			1, 0x40, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",			1, 0x80, 0, 1, dip_game_mode  },
+	{ "��������(����ָ)",	1, 0x02, 0, 1, dip_on_off     },
+	{ "�������",			1, 0x04, 0, 1, dip_on_off     },
+	{ "����",				1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",			1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",			1, 0x20, 0, 1, dip_on_off     },
+	{ "��������",			1, 0x40, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",			1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝",				1, 0x07, 0, 7, dip_coin1      },
-	{ "2芝饑ハシ,1芝タm鷄",	1, 0x40, 0, 1, dip_on_off     },
+	{ "Ͷ��",				1, 0x07, 0, 7, dip_coin1      },
+	{ "2���_ʼ,1���m�P",	1, 0x40, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "□カネ",		1, 0x07, 0, 7, dip_difficulty },
-	{ "ノ愑□,		1, 0xe0, 0, 4, {"1","2","3","4","5"} },
+	{ "�y��",		1, 0x07, 0, 7, dip_difficulty },
+	{ "����",		1, 0xe0, 0, 4, {"1","2","3","4","5"} },
 
 	// DIP C
-	{ "殪マ゛ノ愑□ス□ヨヨク)",	1, 0x02, 0, 1, dip_on_off     },
-	{ "テ籐M゜[ヘ□,			1, 0x04, 0, 1, dip_on_off     },
-	{ "詈カィ",				1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",			1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,			1, 0x20, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",			1, 0x40, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",			1, 0x80, 0, 1, dip_game_mode  },
+	{ "�o������(����ָ)",	1, 0x02, 0, 1, dip_on_off     },
+	{ "���M�[��",			1, 0x04, 0, 1, dip_on_off     },
+	{ "�i��",				1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",			1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",			1, 0x20, 0, 1, dip_on_off     },
+	{ "���S�m�P",			1, 0x40, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",			1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coinage",                         1, 0x07, 0, 7, dip_coin1      },
@@ -3891,48 +3891,48 @@ static void dip_save_qtono2(void)
 #if DIPSW_CHINESE_SIMPLIFIED
 #define dip_coin_megaman	\
 {							\
-	"9アメヘ□エホ",				\
-	"8アメヘ□エホ",				\
-	"7アメヘ□エホ",				\
-	"6アメヘ□エホ",				\
-	"5アメヘ□エホ",				\
-	"4アメヘ□エホ",				\
-	"3アメヘ□エホ",				\
-	"2アメヘ□エホ",				\
-	"2アメソェハシ,1アメミ□リ",		\
-	"1アメヘ□エホ",				\
-	"1アメヘ□エホ",				\
-	"1アメヘ□エホ",				\
-	"1アメヘ□エホ",				\
-	"1アメヘ□エホ",				\
-	"1アメヘ□エホ",				\
-	"1アメヘ□エホ",				\
-	"1アメヘ□エホ",				\
-	"1アメヘ□エホ",				\
-	"テ箙ムモホヘ□				\
+	"9����1��",				\
+	"8����1��",				\
+	"7����1��",				\
+	"6����1��",				\
+	"5����1��",				\
+	"4����1��",				\
+	"3����1��",				\
+	"2����1��",				\
+	"2�ҿ�ʼ,1������",		\
+	"1����1��",				\
+	"1����2��",				\
+	"1����3��",				\
+	"1����4��",				\
+	"1����5��",				\
+	"1����6��",				\
+	"1����7��",				\
+	"1����8��",				\
+	"1����9��",				\
+	"�������"				\
 }
 #elif DIPSW_CHINESE_TRADITIONAL
 #define dip_coin_megaman	\
 {							\
-	"9芝ヘ□エホ",				\
-	"8芝ヘ□エホ",				\
-	"7芝ヘ□エホ",				\
-	"6芝ヘ□エホ",				\
-	"5芝ヘ□エホ",				\
-	"4芝ヘ□エホ",				\
-	"3芝ヘ□エホ",				\
-	"2芝ヘ□エホ",				\
-	"2芝饑ハシ,1芝タm鷄",		\
-	"1芝ヘ□エホ",				\
-	"1芝ヘ□エホ",				\
-	"1芝ヘ□エホ",				\
-	"1芝ヘ□エホ",				\
-	"1芝ヘ□エホ",				\
-	"1芝ヘ□エホ",				\
-	"1芝ヘ□エホ",				\
-	"1芝ヘ□エホ",				\
-	"1芝ヘ□エホ",				\
-	"テ籐M゜[ヘ□				\
+	"9����1��",				\
+	"8����1��",				\
+	"7����1��",				\
+	"6����1��",				\
+	"5����1��",				\
+	"4����1��",				\
+	"3����1��",				\
+	"2����1��",				\
+	"2���_ʼ,1���m�P",		\
+	"1����1��",				\
+	"1����2��",				\
+	"1����3��",				\
+	"1����4��",				\
+	"1����5��",				\
+	"1����6��",				\
+	"1����7��",				\
+	"1����8��",				\
+	"1����9��",				\
+	"���M�[��"				\
 }
 #else
 #define dip_coin_megaman				\
@@ -3962,34 +3962,34 @@ static dipswitch_t dipswitch_megaman[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメ",		1, 0x1f, 0, 18, dip_coin_megaman },
-	{ "ヘカアメイロ",		1, 0x60, 0, 2, {"1,キヨソェ","1,チェサ□,"2,チェサ□} },
+	{ "Ͷ��",		1, 0x1f, 0, 18, dip_coin_megaman },
+	{ "Ͷ�Ҳ�",		1, 0x60, 0, 2, {"1,�ֿ�","1,����","2,����"} },
 
 	// DIP B
-	{ "トムカネ",		1, 0x03, 0, 3, {"シ□・","ニユヘィ","タァトム","ラ□ム"} },
-	{ "ハアシ□,		1, 0x0c, 0, 3, {"100テ□,"90テ□,"70テ□,"60テ□} },
-	{ "ノ□□,		1, 0x40, 0, 1, dip_on_off },
+	{ "�Ѷ�",		1, 0x03, 0, 3, {"��","��ͨ","����","����"} },
+	{ "ʱ��",		1, 0x0c, 0, 3, {"100��","90��","70��","60��"} },
+	{ "����",		1, 0x40, 0, 1, dip_on_off },
 
 	// DIP C
-	{ "キュラェニチトサ",	1, 0x01, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,	1, 0x02, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",	1, 0x04, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "��ת��Ļ",	1, 0x01, 0, 1, dip_on_off     },
+	{ "��ʾ����",	1, 0x02, 0, 1, dip_on_off     },
+	{ "��������",	1, 0x04, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝",		1, 0x1f, 0, 18, dip_coin_megaman },
-	{ "ヘカ芝イロ",		1, 0x60, 0, 2, {"1,キヨ饑","1,ツ等C","2,ツ等C"} },
+	{ "Ͷ��",		1, 0x1f, 0, 18, dip_coin_megaman },
+	{ "Ͷ�Ų�",		1, 0x60, 0, 2, {"1,���_","1,�C","2,�C"} },
 
 	// DIP B
-	{ "□カネ",		1, 0x03, 0, 3, {"コ□ホ","ニユヘィ","タァ□","ラ□y"} },
-	{ "瓶馮",		1, 0x0c, 0, 3, {"100テ□,"90テ□,"70テ□,"60テ□} },
-	{ "ツ編□,		1, 0x40, 0, 1, dip_on_off },
+	{ "�y��",		1, 0x03, 0, 3, {"����","��ͨ","���y","���y"} },
+	{ "�r�g",		1, 0x0c, 0, 3, {"100��","90��","70��","60��"} },
+	{ "��",		1, 0x40, 0, 1, dip_on_off },
 
 	// DIP C
-	{ "キュ゛Dニチトサ",	1, 0x01, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,	1, 0x02, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",	1, 0x04, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "���D��Ļ",	1, 0x01, 0, 1, dip_on_off     },
+	{ "��ʾ��",	1, 0x02, 0, 1, dip_on_off     },
+	{ "���S�m�P",	1, 0x04, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coinage",             1, 0x1f, 0, 18, dip_coin_megaman },
@@ -4015,32 +4015,32 @@ static dipswitch_t dipswitch_rockmanj[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメ",		1, 0x1f, 0, 18, dip_coin_megaman },
-	{ "ヘカアメイロ",		1, 0x60, 0, 2, {"1,キヨソェ","1,チェサ□,"2,チェサ□} },
+	{ "Ͷ��",		1, 0x1f, 0, 18, dip_coin_megaman },
+	{ "Ͷ�Ҳ�",		1, 0x60, 0, 2, {"1,�ֿ�","1,����","2,����"} },
 
 	// DIP B
-	{ "トムカネ",		1, 0x03, 0, 3, {"シ□・","ニユヘィ","タァトム","ラ□ム"} },
-	{ "ハアシ□,		1, 0x0c, 0, 3, {"100テ□,"90テ□,"70テ□,"60テ□} },
+	{ "�Ѷ�",		1, 0x03, 0, 3, {"��","��ͨ","����","����"} },
+	{ "ʱ��",		1, 0x0c, 0, 3, {"100��","90��","70��","60��"} },
 
 	// DIP C
-	{ "キュラェニチトサ",	1, 0x01, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,	1, 0x02, 0, 1, dip_on_off     },
-	{ "ヤハミ□□リ",	1, 0x04, 0, 1, dip_yes_no     },
-	{ "モホマキト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "��ת��Ļ",	1, 0x01, 0, 1, dip_on_off     },
+	{ "��ʾ����",	1, 0x02, 0, 1, dip_on_off     },
+	{ "��������",	1, 0x04, 0, 1, dip_yes_no     },
+	{ "��Ϸģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝",		1, 0x1f, 0, 18, dip_coin_megaman },
-	{ "ヘカ芝イロ",		1, 0x60, 0, 2, {"1,キヨ饑","1,ツ等C","2,ツ等C"} },
+	{ "Ͷ��",		1, 0x1f, 0, 18, dip_coin_megaman },
+	{ "Ͷ�Ų�",		1, 0x60, 0, 2, {"1,���_","1,�C","2,�C"} },
 
 	// DIP B
-	{ "□カネ",		1, 0x03, 0, 3, {"コ□ホ","ニユヘィ","タァ□","ラ□y"} },
-	{ "瓶馮",		1, 0x0c, 0, 3, {"100テ□,"90テ□,"70テ□,"60テ□} },
+	{ "�y��",		1, 0x03, 0, 3, {"����","��ͨ","���y","���y"} },
+	{ "�r�g",		1, 0x0c, 0, 3, {"100��","90��","70��","60��"} },
 
 	// DIP C
-	{ "キュ゛Dニチトサ",	1, 0x01, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,	1, 0x02, 0, 1, dip_on_off     },
-	{ "ヤハヤSタm鷄",	1, 0x04, 0, 1, dip_yes_no     },
-	{ "゜[沢ト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "���D��Ļ",	1, 0x01, 0, 1, dip_on_off     },
+	{ "��ʾ��",	1, 0x02, 0, 1, dip_on_off     },
+	{ "���S�m�P",	1, 0x04, 0, 1, dip_yes_no     },
+	{ "�[��ģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coinage",             1, 0x1f, 0, 18, dip_coin_megaman },
@@ -4195,32 +4195,32 @@ static dipswitch_t dipswitch_pnickj[] =
 {
 #if DIPSW_CHINESE_SIMPLIFIED
 	// DIP A
-	{ "ヘカアメ",		1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカアメイロ",		1, 0x08, 0, 1, dip_on_off     },
+	{ "Ͷ��",		1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ�Ҳ�",		1, 0x08, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "トムカネ",		1, 0x07, 0, 7, dip_difficulty },
-	{ "カヤユスト」ハス",	1, 0xc0, 0, 3, {"1セヨ","3セヨ","5セヨ","7セヨ"} },
+	{ "�Ѷ�",		1, 0x07, 0, 7, dip_difficulty },
+	{ "��սģʽ",	1, 0xc0, 0, 3, {"1��","3��","5��","7��"} },
 
 	// DIP C
-	{ "ヒ□ィ",		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュラェニチトサ",	1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセノ□□,	1, 0x20, 0, 1, dip_on_off     },
-	{ "モホマキト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "����",		1, 0x08, 0, 1, dip_on_off     },
+	{ "��ת��Ļ",	1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ����",	1, 0x20, 0, 1, dip_on_off     },
+	{ "��Ϸģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #elif DIPSW_CHINESE_TRADITIONAL
 	// DIP A
-	{ "ヘカ芝",		1, 0x07, 0, 7, dip_coin1      },
-	{ "ヘカ芝イロ",		1, 0x08, 0, 1, dip_on_off     },
+	{ "Ͷ��",		1, 0x07, 0, 7, dip_coin1      },
+	{ "Ͷ�Ų�",		1, 0x08, 0, 1, dip_on_off     },
 
 	// DIP B
-	{ "□カネ",		1, 0x07, 0, 7, dip_difficulty },
-	{ "絹択ト」ハス",	1, 0xc0, 0, 3, {"1セヨ","3セヨ","5セヨ","7セヨ"} },
+	{ "�y��",		1, 0x07, 0, 7, dip_difficulty },
+	{ "����ģʽ",	1, 0xc0, 0, 3, {"1��","3��","5��","7��"} },
 
 	// DIP C
-	{ "詈カィ",		1, 0x08, 0, 1, dip_on_off     },
-	{ "キュ゛Dニチトサ",	1, 0x10, 0, 1, dip_on_off     },
-	{ "ムンハセツ編□,	1, 0x20, 0, 1, dip_on_off     },
-	{ "゜[沢ト」ハス",	1, 0x80, 0, 1, dip_game_mode  },
+	{ "�i��",		1, 0x08, 0, 1, dip_on_off     },
+	{ "���D��Ļ",	1, 0x10, 0, 1, dip_on_off     },
+	{ "��ʾ��",	1, 0x20, 0, 1, dip_on_off     },
+	{ "�[��ģʽ",	1, 0x80, 0, 1, dip_game_mode  },
 #else
 	// DIP A
 	{ "Coinage",       1, 0x07, 0, 7, dip_coin1      },

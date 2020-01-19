@@ -2,7 +2,7 @@
 
 	emumain.c
 
-	繧ｨ繝溘Η繝ｬ繝ｼ繧ｷ繝ｧ繝ｳ繧ｳ繧｢
+	エミュレーションコア
 
 ******************************************************************************/
 
@@ -80,5 +80,7 @@ void update_screen(void);
 
 void fatalerror(const char *text, ...);
 void show_fatal_error(void);
+
+void save_snapshot(void);
 
 #endif /* EMUMAIN_H */

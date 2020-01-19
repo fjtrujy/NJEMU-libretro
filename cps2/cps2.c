@@ -2,7 +2,7 @@
 
 	cps2.c
 
-	CPS2„Éª„Ç£„Éª„Çú„ÉªËûÇ‚ñ°`„Éª„Ç≠„ÉªÈÄæ‚ñ°„Ç¶„Éª„Äå
+	CPS2•®•ﬂ•Â•Ï©`•∑•Á•Û•≥•¢
 
 ******************************************************************************/
 
@@ -10,11 +10,11 @@
 
 
 /******************************************************************************
-	„Éª‚ñ°`„Éª„Ç©„Éª‚ñ°v„Éè‚ñ°
+	•Ì©`•´•ÎÈv ˝
 ******************************************************************************/
 
 /*--------------------------------------------------------
-	CPS2„Éª„Ç£„Éª„Çú„ÉªËûÇ‚ñ°`„Éª„Ç≠„ÉªÈÄæ‚ñ°‚ñ°„É¨„Çµ„ÉÉ
+	CPS2•®•ﬂ•Â•Ï©`•∑•Á•Û≥ı∆⁄ªØ
 --------------------------------------------------------*/
 
 static int cps2_init(void)
@@ -23,15 +23,54 @@ static int cps2_init(void)
 		return 0;
 
 	msg_printf(TEXT(DONE2));
+	msg_screen_clear();
 
 	video_clear_screen();
 
+#ifdef ADHOC
+	if (!cps2_video_init())
+		return 0;
+
+	if (adhoc_enable)
+	{
+		sprintf(adhoc_matching, "%s_%s", PBPNAME_STR, game_name);
+
+		Loop = LOOP_EXEC;
+
+		if (adhocInit(adhoc_matching) == 0)
+		{
+			if ((adhoc_server = adhocSelect()) >= 0)
+			{
+				video_clear_screen();
+
+				if (adhoc_server)
+				{
+					option_controller = INPUT_PLAYER1;
+
+					return adhoc_send_state(NULL);
+				}
+				else
+				{
+					option_controller = INPUT_PLAYER2;
+
+					return adhoc_recv_state(NULL);
+				}
+			}
+		}
+
+		Loop = LOOP_BROWSER;
+		return 0;
+	}
+
+	return 1;
+#else
 	return cps2_video_init();
+#endif
 }
 
 
 /*--------------------------------------------------------
-	CPS2„Éª„Ç£„Éª„Çú„ÉªËûÇ‚ñ°`„Éª„Ç≠„ÉªÈÄæ‚ñ°‚ñ°„Çµ„Éª„ÉÜ„Éª„Éç
+	CPS2•®•ﬂ•Â•Ï©`•∑•Á•Û•Í•ª•√•»
 --------------------------------------------------------*/
 
 static void cps2_reset(void)
@@ -54,7 +93,7 @@ static void cps2_reset(void)
 }
 
 /*--------------------------------------------------------
-	CPS„Éª„Ç£„Éª„Çú„ÉªËûÇ‚ñ°`„Éª„Ç≠„ÉªÈÄæ‚ñ°K„ÉÅ„Éí
+	CPS•®•ﬂ•Â•Ï©`•∑•Á•ÛΩK¡À
 --------------------------------------------------------*/
 
 static void cps2_exit(void)
@@ -62,14 +101,31 @@ static void cps2_exit(void)
 	video_set_mode(32);
 	video_clear_screen();
 
+	ui_popup_reset();
+
 	video_clear_screen();
+	msg_screen_init(WP_LOGO, ICON_SYSTEM, TEXT(EXIT_EMULATION2));
 
 	msg_printf(TEXT(PLEASE_WAIT2));
 
 	cps2_video_exit();
 	cps2_driver_exit();
 
+#ifdef ADHOC
+	if (!adhoc_enable)
+#endif
+	{
+#ifdef COMMAND_LIST
+		free_commandlist();
+#endif
+		save_gamecfg(game_name);
+	}
+
 	msg_printf(TEXT(DONE2));
+
+#ifdef ADHOC
+	if (adhoc_enable) adhocTerm();
+#endif
 
 	show_exit_screen();
 }
@@ -78,9 +134,44 @@ static void cps2_exit(void)
 	cheats
 --------------------------------------------------------*/
 
+extern int cheat_num;
+extern gamecheat_t* gamecheat[];
+
+static void apply_cheat()
+{
+	gamecheat_t *a_cheat = NULL;
+	cheat_option_t *a_cheat_option = NULL;
+	cheat_value_t *a_cheat_value = NULL;
+	int c,j;
+
+   for( c = 0; c < cheat_num; c++)
+   { //arreglo de cheats
+	a_cheat = gamecheat[c];
+    if( a_cheat == NULL)
+		break; //seguro
+
+    if( a_cheat->curr_option == 0)//se asume que el option 0 es el disable
+		continue;
+
+    //Se busca cual es el option habilitado
+    a_cheat_option = a_cheat->cheat_option[ a_cheat->curr_option];
+    if( a_cheat_option == NULL)
+		break; //seguro
+
+		//Se ejecutan todos los value del cheat option
+		for(  j = 0; j< a_cheat_option->num_cheat_values; j++)
+		{
+		a_cheat_value = a_cheat_option->cheat_value[j];
+			if( a_cheat_value == NULL)
+				break;//seguro
+				m68000_write_memory_8(a_cheat_value->address,  a_cheat_value->value);
+
+		}
+    }
+}
 
 /*--------------------------------------------------------
-	CPS„Éª„Ç£„Éª„Çú„ÉªËûÇ‚ñ°`„Éª„Ç≠„ÉªÈÄæ‚ñ°g„Éü„Éü
+	CPS•®•ﬂ•Â•Ï©`•∑•Á•Ûåg––
 --------------------------------------------------------*/
 
 static void cps2_run(void)
@@ -108,22 +199,24 @@ static void cps2_run(void)
 				autoframeskip_reset();
 			}
 			
+			apply_cheat();//davex
 			timer_update_cpu();
 			update_screen();
 			update_inputport();
 		}
 
 		video_clear_screen();
+		sound_mute(1);
 	}
 }
 
 
 /******************************************************************************
-	„Éª„Éº„Éª‚ñ°`„Éª„Éü„Éª‚ñ°v„Éè‚ñ°
+	•∞•Ì©`•–•ÎÈv ˝
 ******************************************************************************/
 
 /*--------------------------------------------------------
-	CPS2„Éª„Ç£„Éª„Çú„ÉªËûÇ‚ñ°`„Éª„Ç≠„ÉªÈÄæ‚ñ°Áöà„ÄÅ„Éª‚ñ°
+	CPS2•®•ﬂ•Â•Ï©`•∑•Á•Û•·•§•Û
 --------------------------------------------------------*/
 
 void cps2_main(void)
@@ -133,6 +226,8 @@ void cps2_main(void)
 	while (Loop >= LOOP_RESTART)
 	{
 		Loop = LOOP_EXEC;
+
+		ui_popup_reset();
 
 		fatal_error = 0;
 
